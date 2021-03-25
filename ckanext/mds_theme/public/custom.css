@@ -1,0 +1,26 @@
+.logo-ministerio {
+  height: 50px;
+  max-width: 100%;
+  display: block;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.list-group+.panel-footer {
+  border-top-width: 0;
+}
+
+.main {
+  padding-top: 72px;
+  background: #FFF;
+}
+
+.jumbotron {
+  background-image: url('/img/home_bg.png');
+}

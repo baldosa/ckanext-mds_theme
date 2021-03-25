@@ -1,0 +1,77 @@
+{% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
+
+{% block subtitle %}{{ _("asdf") }}{% endblock %}
+
+
+{% block main_content %}
+<div id="title" class="jumbotron">
+  <div class="container">
+    <div class="col-sm-12">
+      <ol class="breadcrumb">
+        <li><a href="/">Inicio</a></li>
+      </ol>
+
+      <div class="jumbotron_body text-center">
+        <h2>Datos abiertos del Ministerio de Desarrollo Social</h2>
+        <p class="description col-xs-10 col-xs-offset-1">
+          Ponemos a tu alcance datos públicos del Ministerio de Desarrollo Social de la Nación en formatos abiertos de modo que
+          puedas usarlos y compartirlos. Te proponemos, a través de este portal, tener un punto de encuentro entre el
+          ministerio, las organizaciones de la sociedad civil y los ciudadanos.
+        </p>
+      </div>
+      <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-offset-3 col-lg-6 no-padding">
+        <form class="module-content search-form" method="get" action="{% url_for controller='dataset', action='search' %}">
+          <input type="text" class="search" name="q" value="" autocomplete="off" title="Search"
+            placeholder="¿Qué dataset buscás?" maxlength="200" />
+          <button type="submit">
+            <i class="fa fa-search"></i>
+            Buscar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row panels-row m-t-2">
+    <div class="col-xs-12 col-sm-6 col-md-4"> <a class="panel panel-default" href="{{ h.url_for(controller='dataset', action='search') }}">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left padding-20"><i class="fa icono-arg-documento fa-fw fa-2x text-escarapela"></i></div>
+            <div class="media-body">
+              <h3>Datasets</h3>
+              <p>Explorá los datasets que tenemos publicados.</p>
+            </div>
+          </div>
+        </div>
+      </a> </div>
+    <div class="col-xs-12 col-sm-6 col-md-4"> <a class="panel panel-default"
+        href="https://datos.gob.ar">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left padding-20"><i class="fa icono-arg-datos-abiertos fa-fw fa-2x text-lavanda"></i></div>
+            <div class="media-body">
+              <h3>Datos Argentina</h3>
+              <p>Visitá el portal de datos abiertos de todos los ministerios
+              </p>
+            </div>
+          </div>
+        </div>
+      </a> </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <a class="panel panel-default" href="https://www.argentina.gob.ar/desarrollosocial/transparencia/pedirinformacion">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left padding-20"><i class="icono-arg-denuncia fa-fw fa-2x  text-mandarina"></i></div>
+            <div class="media-body">
+              <h3>Pedinos información</h3>
+              <p>¿No encontrás la información que buscás? Podés hacernos un pedido de acceso a la información pública.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
