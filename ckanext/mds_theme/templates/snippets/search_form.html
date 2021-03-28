@@ -1,0 +1,11 @@
+<div class="row">
+  <form class="module-content" method="get" action="{% url_for controller='dataset', action='search' %}">
+    <div class="col-md-8">
+      <input type="search" class="form-control" id="buscar" required="" aria-required="true" name="q" value="" autocomplete="off" title="Search"
+      placeholder="¿Qué dataset buscás?" maxlength="200">
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-block">Buscar</button>
+    </div>
+  </form>
+</div>

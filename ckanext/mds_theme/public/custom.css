@@ -1,3 +1,5 @@
+/* andino */
+
 .logo-ministerio {
   height: 50px;
   max-width: 100%;
@@ -12,7 +14,7 @@
   border-bottom-left-radius: 3px;
 }
 
-.list-group+.panel-footer {
+.list-group .panel-footer {
   border-top-width: 0;
 }
 
@@ -21,6 +23,97 @@
   background: #FFF;
 }
 
+#pkg-secondary-info h2.secondary-info-title {
+  margin-top: 1em;
+}
+
+#pkg-secondary-info {
+  padding-top: 3em;
+}
+
+.full-heigth {
+  height: 100%;
+}
+
+/* poncho */
+
 .jumbotron {
   background-image: url('/img/home_bg.png');
+}
+
+.breadcrumb a:hover {
+  color: #333;
+}
+
+.filters li a {
+  border-radius: 30px;
+}
+
+section {
+  padding: 0;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+/* ckan */
+
+.dataset-list .panel-hover .panel {
+  margin-bottom: 0.6em;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 20%);
+}
+
+.dataset-resources a {
+  color: #FFF;
+}
+
+html, body, .container {
+  height: 100%;
+}
+
+.dataset .container {
+  display: table;
+  margin-top: -50px;
+  padding: 50px 0 0 0;
+  /*set left/right padding according to needs*/
+  box-sizing: border-box;
+}
+
+
+.dataset .title {
+  padding-top: 1.5em;
+}
+
+.resource-item .format-label {
+  top: 7px;
+}
+
+.resource-item {
+  padding: 10px 10px 16px 60px;
+}
+
+.resource-item .heading {
+  color: #0072bb;
+  font-size: 500;
+  font-weight: bold;
+}
+
+.resource-item .heading {
+  color: #0072bb;
+  font-weight: bold;
+}
+
+.resource-item .heading a:active, a:focus, a:hover {
+  color: #6a1b99;
+}
+
+.badge-primary {
+  background-color: #0072bb;
+}
+
+/* custom */
+
+#pkg-secondary-info #info-container .row {
+  padding: 10px;
 }

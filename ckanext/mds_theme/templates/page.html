@@ -20,8 +20,8 @@ file.
 <main role="main">
   <div class="main">
     <div id="content" class="">
-      <div id="content" class="">
         {% block main_content %}
+          <div class="container">
           {% block flash %}
             <div class="flash-messages">
               {% block flash_inner %}
@@ -35,85 +35,66 @@ file.
           {% endblock %}
 
           {% block toolbar %}
-            <div class="toolbar" role="navigation" aria-label="{{ _('Breadcrumb') }}">
               {% block breadcrumb %}
                 {% if self.breadcrumb_content() | trim %}
                   <ol class="breadcrumb">
-                    {% snippet 'snippets/home_breadcrumb_item.html' %}
+                    <li>
+                      <a href="{{ h.url_for('home.index') }}" aria-label="{{ _('Home') }}">
+                        <i class="fa fa-home"></i>
+                        <span>{{ _('Home') }}</span>
+                      </a>
+                    </li>
                     {% block breadcrumb_content %}{% endblock %}
                   </ol>
                 {% endif %}
               {% endblock %}
-            </div>
+
           {% endblock %}
 
-          <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' or c.action=='resource_read' %} no-nav{% endif %}">
-            {#
-            The pre_primary block can be used to add content to before the
-            rendering of the main content columns of the page.
-            #}
-            {% block pre_primary %}
-            {% endblock %}
+            <div class="row {% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' or c.action=='resource_read' %} no-nav{% endif %} pt-2">
+              {#
+              The pre_primary block can be used to add content to before the
+              rendering of the main content columns of the page.
+              #}
+              {% block pre_primary %}
+              {% endblock %}
 
-            {% block secondary %}
-              <aside class="secondary col-sm-3">
-                {#
-                The secondary_content block can be used to add content to the
-                sidebar of the page. This is the main block that is likely to be
-                used within a template.
+              {% block secondary %}
+                <div class="col-md-3">
+                  {% block secondary_content %}{% endblock %}
+                </div>
+              {% endblock %}
 
-                Example:
-
-                  {% block secondary_content %}
-                    <h2>A sidebar item</h2>
-                    <p>Some content for the item</p>
-                  {% endblock %}
-                #}
-                {% block secondary_content %}{% endblock %}
-              </aside>
-            {% endblock %}
-
-            {% block primary %}
-              <div class="primary col-sm-9 col-xs-12" role="main">
-                {#
-                The primary_content block can be used to add content to the page.
-                This is the main block that is likely to be used within a template.
-
-                Example:
-
+              {% block primary %}
+                <div class="container col-md-9">
                   {% block primary_content %}
-                    <h1>My page content</h1>
-                    <p>Some content for the page</p>
-                  {% endblock %}
-                #}
-                {% block primary_content %}
-                  <article class="module">
-                    {% block page_header %}
-                      <header class="module-content page-header">
-                        {% if self.content_action() | trim %}
-                          <div class="content_action">
-                            {% block content_action %}{% endblock %}
+                    <article class="module">
+                      {% block page_header %}
+                        <header class="module-content page-header">
+                          {% if self.content_action() | trim %}
+                            <div class="content_action">
+                              {% block content_action %}{% endblock %}
+                            </div>
+                          {% endif %}
+                          <ul class="nav nav-tabs">
+                            {% block content_primary_nav %}{% endblock %}
+                          </ul>
+                        </header>
+                      {% endblock %}
+                      <div class="module-content">
+                        {% if self.page_primary_action() | trim %}
+                          <div class="page_primary_action">
+                            {% block page_primary_action %}{% endblock %}
                           </div>
                         {% endif %}
-                        <ul class="nav nav-tabs">
-                          {% block content_primary_nav %}{% endblock %}
-                        </ul>
-                      </header>
-                    {% endblock %}
-                    <div class="module-content">
-                      {% if self.page_primary_action() | trim %}
-                        <div class="page_primary_action">
-                          {% block page_primary_action %}{% endblock %}
-                        </div>
-                      {% endif %}
-                      {% block primary_content_inner %}
-                      {% endblock %}
-                    </div>
-                  </article>
-                {% endblock %}
-              </div>
-            {% endblock %}
-          </div>
+                        {% block primary_content_inner %}
+                        {% endblock %}
+                      </div>
+                    </article>
+                  {% endblock %}
+                </div>
+              {% endblock %}
+            </div>
         {% endblock %}
       </div>
     </div>

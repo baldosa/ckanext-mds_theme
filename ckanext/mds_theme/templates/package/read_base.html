@@ -1,0 +1,195 @@
+{% extends "package/base.html" %}
+
+{% block subtitle %}{{ h.dataset_display_name(pkg) }} {{ g.template_title_delimiter }} {{ super() }}{% endblock %}
+
+{% block head_extras -%}
+  {{ super() }}
+  {% set description = h.markdown_extract(pkg.notes, extract_length=200)|forceescape %}
+  <meta property="og:title" content="{{ h.dataset_display_name(pkg) }} - {{ g.site_title }}">
+  <meta property="og:description" content="{{ description|forceescape|trim }}">
+{% endblock -%}
+
+
+{% block content_action %}
+{% endblock %}
+
+
+{% block primary %}
+<div class="col-md-4">
+  <div id="pkg-secondary-info" class="col-md-12">
+    <h2 class="secondary-info-title">Información adicional</h2>
+  
+    <div id="info-container">
+  
+      {% set dataset_url = h.url_for(controller='dataset', action='search') %}
+  
+      {% if pkg.groups and pkg.groups|length > 0 %}
+      <div class="row group-row">
+        <div class="row-title">
+          Temas
+        </div>
+        <div class="row-value">
+          {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
+          {%- for group in pkg.groups %}
+          <div class="group-img-container">
+            <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+              {%- if show_group_imgs -%}
+              {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+              <i class="fa fa-envelope"></i>
+              {%- endif -%}
+              {%- else -%}
+              <span class="label group">{{ group.title }}</span>
+              {%- endif -%}
+            </a>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+      {% endif %}
+  
+      {% if pkg.tags and pkg.tags|length > 0 %}
+      <div class="row group-row">
+        <div class="row-title">
+          Etiquetas
+        </div>
+        <div class="row-value">
+          {% for tag in pkg.tags %}
+          <a href="{{ h.add_url_param(new_params={'tags': tag.name}, alternative_url=dataset_url) }}" class="badge badge-primary">{{ tag.name }}</a>
+          {% endfor %}
+            {% if pkg.tags|length > 5 %}
+          <p class="toggle-tags show-more-tags">
+            Mostrar más
+          </p>
+          <p class="toggle-tags show-fewer-tags hidden">
+            Mostrar menos
+          </p>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+  
+      <div class="row">
+        <div class="row-title">
+          Licencia
+        </div>
+        <div class="row-value">
+          {#{ h.get_license_title(pkg.license_id) }#}
+        </div>
+      </div>
+  
+      {% if pkg.extras %}
+      {% for extra in pkg.extras %}
+      {% if extra.key in ('accrualPeriodicity', 'updateFrequency') and extra.value and extra.value|length > 0 %}
+      <div class="row">
+        <div class="row-title">
+          Frecuencia de actualización
+        </div>
+        <div class="row-value">
+          <p>{{ h.update_frequencies(extra.value)[1] }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+  
+      {% if pkg.maintainer and pkg.maintainer|length > 0 %}
+      <div class="row">
+        <div class="row-title">
+          Mantenedor
+        </div>
+        <div class="row-value">
+          <p class="pkg-maintainer">
+            {{ pkg.maintainer }}
+            {% if pkg.maintainer_email %}
+            <a href="mailto:{{ pkg.maintainer_email }}">
+              <i class="fa fa-envelope"></i>
+            </a>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pkg.author and pkg.author|length > 0 %}
+      <div class="row">
+        <div class="row-title">
+          Responsable
+        </div>
+        <div class="row-value">
+          <p class="pkg-maintainer">
+            {{ pkg.author }}
+            {% if pkg.author_email %}
+            <a href="mailto:{{ pkg.maintainer_email }}">
+              <i class="fa fa-envelope"></i>
+            </a>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+  
+  
+      <div class="row">
+        <div class="row-title">
+          Fecha de publicación
+        </div>
+        <div class="row-value">
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-title">Fecha de actualización</div>
+        <div class="row-value">asdf
+        </div>
+      </div>
+  
+      {% if pkg.url %}
+      <div class="row">
+        <div class="row-title">
+          Página de referencia
+        </div>
+        <div class="row-value">
+          {{ pkg.url|urlize }}
+        </div>
+      </div>
+      {% endif %}
+  
+      {% if documentation_url and documentation_url.strip()|length > 0 %}
+      <div class="row">
+        <div class="row-title">
+          Documentación
+        </div>
+        <div class="row-value">
+          {{ documentation_url.strip()|urlize }}
+        </div>
+      </div>
+      {% endif %}
+  
+      {% if source_url and source_url.strip()|length > 0 %}
+      <div class="row">
+        <div class="row-title">
+          Fuente primaria
+        </div>
+        <div class="row-value">
+          {{ source_url.strip()|urlize }}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  
+    <div id="pkg-recent-activity">
+      <h2 class="recent-activity-title">Actividad reciente</h2>
+      <p class="activity-read-more">
+        
+        Mostrar más
+        
+      </p>
+  
+      <p class="activity-loading hidden">Cargando</p>
+      <hr class="final-separator">
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

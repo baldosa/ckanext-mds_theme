@@ -12,3 +12,4 @@ class MdsThemePlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic',
             'mds_theme')
+
