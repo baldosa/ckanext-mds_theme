@@ -1,0 +1,188 @@
+{% extends "package/read_base.html" %}
+
+{% set res = resource %}
+
+{% block head_extras -%}
+{{ super() }}
+{% set description = h.markdown_extract(h.get_translated(res, 'description'), extract_length=200) if res.description
+else h.markdown_extract(h.get_translated(package, 'notes'), extract_length=200) %}
+<meta property="og:title"
+  content="{{ h.dataset_display_name(package) }} - {{ h.resource_display_name(res) }} - {{ g.site_title }}">
+<meta property="og:description" content="{{ description|forceescape }}">
+{% endblock -%}
+
+{% block subtitle %}{{ h.dataset_display_name(package) }} {{ g.template_title_delimiter }} {{
+h.resource_display_name(res) }}{% endblock %}
+
+{% block breadcrumb_content_selected %}{% endblock %}
+
+{% block breadcrumb_content %}
+{{ super() }}
+<li class="active"><a href="">{{ h.resource_display_name(res)|truncate(30) }}</a></li>
+{% endblock %}
+
+{% block secondary %}
+<div class="col-md-4">
+  <div id="pkg-secondary-info" class="col-md-8">
+    <h2 class="secondary-info-title">Información adicional</h2>
+
+    <div id="info-container">
+
+      {% set dataset_url = h.url_for(controller='dataset', action='search') %}
+
+      {% if pkg.groups and pkg.groups|length > 0 %}
+      <div class="row group-row">
+        <div class="row-title">
+          Temas
+        </div>
+        <div class="row-value">
+          {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
+          {%- for group in pkg.groups %}
+          <div class="group-img-container">
+            <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+              {%- if show_group_imgs -%}
+              {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+              <i class="fa fa-envelope"></i>
+              {%- endif -%}
+              {%- else -%}
+              <span class="label group">{{ group.title }}</span>
+              {%- endif -%}
+            </a>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if pkg_dict.metadata_modified %}
+      <div class="row">
+        <div class="row-title">
+          Fecha de actualización
+        </div>
+        <div class="row-value">
+          {{ h.render_datetime(res.last_modified, date_format='%Y-%m-%d', with_hours=False) or
+          h.render_datetime(res.created, date_format='%Y-%m-%d', with_hours=False) or _('unknown') }}
+        </div>
+      </div>
+      {% endif %}
+      <div class="row">
+        <div class="row-title">
+          Formato
+        </div>
+        <div class="row-value">
+          {{ res.format or res.mimetype_inner or res.mimetype or _('unknown') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-title">
+          Tamaño
+        </div>
+        <div class="row-value">
+          {{ res.Tamaño or _('unknown') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-title">
+          Licencia
+        </div>
+        <div class="row-value">
+          <a target="_blank" href="{{ pkg.license_url }}">
+            {{ pkg.license_title }}
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block primary %}
+<div class="col-md-8 dataset">
+  {{ super() }}
+  {% block package_description %}
+  {% if pkg.private %}
+  <span class="dataset-private label label-inverse pull-right">
+    <i class="fa fa-lock"></i>
+    {{ _('Private') }}
+  </span>
+  {% endif %}
+  {% block package_archive_notice %}
+  {% if is_activity_archive %}
+  <div class="alert alert-danger">
+    {% trans url=h.url_for(pkg.type ~ '.read', id=pkg.id) %}
+    You're currently viewing an old version of this dataset. To see the
+    current version, click <a href="{{ url }}">here</a>.
+    {% endtrans %}
+  </div>
+  {% endif %}
+  {% endblock %}
+  <h4 class="title">
+    {% block page_heading %}
+    {{ h.resource_display_name(res) }}
+    {% if not is_activity_archive %}
+    {% if h.check_access('resource_update', {'id':res.id }) %}
+    {% link_for _('Manage'), named_route=pkg.type ~ '_resource.edit', id=pkg.name, resource_id=res.id, class_='btn
+    btn-default', icon='wrench' %}
+    {% endif %}
+    {% endif %}
+    {% if pkg.state.startswith('draft') %}
+    [{{ _('Draft') }}]
+    {% endif %}
+    {% if pkg.state == 'deleted' %}
+    [{{ _('Deleted') }}]
+    {% endif %}
+    {% endblock %}
+  </h4>
+  {% block package_notes %}
+  {% if pkg.notes %}
+  <div class="lead">
+    {{ h.render_markdown(h.get_translated(res, 'description')) }}
+  </div>
+  {% endif %}
+  {% endblock %}
+  <a class="btn btn-success" href="{{res.url}}"><i class="fa fa-download"></i> Descargar</a>
+  <hr>
+  {% endblock %}
+
+  {% if pkg.extras %}
+  {% for extra in pkg.extras %}
+  {% if extra.key in ('fields') and extra.value and extra.value|length > 0 %}
+  <div class="row">
+    <h5 class="row-title">
+      Campos del archivo
+    </h5>
+    <div class="row-value">
+      <table class="table table-responsive-poncho">
+        <thead>
+          <th>Nombre del campo</th>
+          <th>Tipo de dato</th>
+          <th>Descripción</th>
+        </thead>
+        <tbody>
+          
+            {% for row in h.astr_to_dict(h.get_pkg_dict_extra(pkg, 'fields')) %}
+            <tr>
+              <td>{{row.title}}</td>
+              <td>{{row.type}}</td>
+              <td>{{row.description}}</td>
+            </tr>
+            {% endfor %}
+            
+          </tbody>
+      </table>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {#
+  {% block resources_list %}
+  {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id, action='read',
+  is_activity_archive=is_activity_archive %}
+  {% endblock %}
+  #}
+
+
+</div>
+{% endblock %}

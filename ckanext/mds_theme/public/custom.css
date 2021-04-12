@@ -18,8 +18,13 @@
   border-top-width: 0;
 }
 
+main {
+  padding-bottom: 0px;
+}
+
 .main {
   padding-top: 72px;
+  padding-bottom: 0px;
   background: #FFF;
 }
 
@@ -80,7 +85,6 @@ html, body, .container {
   box-sizing: border-box;
 }
 
-
 .dataset .title {
   padding-top: 1.5em;
 }
@@ -117,3 +121,23 @@ html, body, .container {
 #pkg-secondary-info #info-container .row {
   padding: 10px;
 }
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  /* Use height insted of min-height for IE 10/11. */
+}
+
+main, [role=main], .main {
+    /* Prevent shrinking the main area in IE 10/11. */
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding-bottom: 0px;
+  }
+  #footer {
+    padding: 1rem 0;
+    margin-top: auto;
+  }

@@ -14,9 +14,9 @@
 {% endblock %}
 
 
-{% block primary %}
+{% block secondary %}
 <div class="col-md-4">
-  <div id="pkg-secondary-info" class="col-md-12">
+  <div id="pkg-secondary-info" class="col-md-8">
     <h2 class="secondary-info-title">Información adicional</h2>
   
     <div id="info-container">
@@ -73,7 +73,10 @@
           Licencia
         </div>
         <div class="row-value">
-          {#{ h.get_license_title(pkg.license_id) }#}
+          <a target="_blank" href="{{ pkg.license_url }}">
+            {{ pkg.license_title }}
+          </a>
+          
         </div>
       </div>
   
@@ -85,7 +88,7 @@
           Frecuencia de actualización
         </div>
         <div class="row-value">
-          <p>{{ h.update_frequencies(extra.value)[1] }}</p>
+          {{ extra.value }}
         </div>
       </div>
       {% endif %}
@@ -134,11 +137,13 @@
           Fecha de publicación
         </div>
         <div class="row-value">
+          {{ h.render_datetime(pkg.metadata_created, date_format='%Y-%m-%d', with_hours=False) }}
         </div>
       </div>
       <div class="row">
         <div class="row-title">Fecha de actualización</div>
-        <div class="row-value">asdf
+        <div class="row-value">
+          {{ h.render_datetime(pkg.metadata_modified, date_format='%Y-%m-%d', with_hours=False) }}
         </div>
       </div>
   
@@ -174,18 +179,6 @@
         </div>
       </div>
       {% endif %}
-    </div>
-  
-    <div id="pkg-recent-activity">
-      <h2 class="recent-activity-title">Actividad reciente</h2>
-      <p class="activity-read-more">
-        
-        Mostrar más
-        
-      </p>
-  
-      <p class="activity-loading hidden">Cargando</p>
-      <hr class="final-separator">
     </div>
   </div>
 </div>
