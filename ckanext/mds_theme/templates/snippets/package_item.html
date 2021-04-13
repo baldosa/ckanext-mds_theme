@@ -19,48 +19,25 @@ Example:
 {% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
 
 {% block package_item %}
-  <div class="panel-hover">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <span role="button">
-          <h3>
-            {% block heading_private %}
-            {% if package.private %}
-            <span class="dataset-private label label-inverse">
-              <i class="fa fa-lock"></i>
-              {{ _('Private') }}
-            </span>
-            {% endif %}
-            {% endblock %}
-            {% block heading_title %}
-            {{ h.link_to(h.truncate(title, truncate_title), h.url_for('%s.read' % package.type, id=package.name)) }}
-            {% endblock %}
-            {% block heading_meta %}
-            {% if package.get('state', '').startswith('draft') %}
-            <span class="label label-info">{{ _('Draft') }}</span>
-            {% elif package.get('state', '').startswith('deleted') %}
-            <span class="label label-danger">{{ _('Deleted') }}</span>
-            {% endif %}
-            {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
-            {% endblock %}
-          </h3>
-        </span>
-        <small>{% if notes %}
-        <div>{{ notes|urlize }}</div>
-        {% else %}
-        <p class="empty">{{ _("This dataset has no description") }}</p>
-        {% endif %}</small>
+<a class="panel panel-default" href="{{ h.url_for('%s.read' % package.type, id=package.name) }}">
+  <div class="panel-body">
+    <h3>{{ package.name }}</h3>
+    <p class="text-muted">
+      {% if notes %}
+      <div>{{ notes }}</div>
+      {% else %}
+      <p class="empty">{{ _("This dataset has no description") }}</p>
+      {% endif %}
         <ul class="dataset-resources list-unstyled">
-          {% block resources_inner %}
           {% for resource in h.dict_list_reduce(package.resources, 'format') %}
           <li>
-            <a href="{{ h.url_for(package.type ~ '.read', id=package.name) }}" class="label label-default"
-              data-format="{{ resource.lower() }}">{{ resource }}</a>
+            <span data-format="{{ resource.lower() }}" class="label label-default">{{ resource }}</span>
           </li>
           {% endfor %}
-          {% endblock %}
         </ul>
-      </div>
-    </div>
+
+    </p>
   </div>
+</a>
+
 {% endblock %}

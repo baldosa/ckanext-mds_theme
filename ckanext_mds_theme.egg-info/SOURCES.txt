@@ -6,9 +6,11 @@ setup.cfg
 setup.py
 ckanext/__init__.py
 ckanext/mds_theme/__init__.py
+ckanext/mds_theme/datajson.py
 ckanext/mds_theme/plugin.py
 ckanext/mds_theme/public/andino.css
 ckanext/mds_theme/public/custom.css
+ckanext/mds_theme/public/data.json
 ckanext/mds_theme/public/poncho/dist/icono-arg.css
 ckanext/mds_theme/public/poncho/dist/css/argentina.css
 ckanext/mds_theme/public/poncho/dist/css/documentacion.css

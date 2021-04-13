@@ -23,7 +23,7 @@
 
     {% block meta %}
     {{ super() }}
-    <meta name="description" value="My website description" />
+    <meta name="description" value="Datos Abiertos del Ministerio de Desarrollo Social" />
     {% endblock %}
 
     #}
@@ -103,6 +103,15 @@
     </style>
     {%- endif %}
     {% endblock %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3FJPP8L6N3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-3FJPP8L6N3');
+    </script>
 </head>
 
 {# Allows custom attributes to be added to the
