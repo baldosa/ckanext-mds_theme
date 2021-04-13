@@ -1,0 +1,259 @@
+{
+    "version": "1.1",
+    "identifier": "",
+    "title": "Datos abiertos del Ministerio de Desarrollo Social",
+    "description": "Ponemos a tu alcance datos p\u00fablicos del Ministerio de Desarrollo Social de la Naci\u00f3n en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a trav\u00e9s de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.",
+    "superThemeTaxonomy": "http://datos.gob.ar/superThemeTaxonomy.json",
+    "publisher": {
+        "mbox": "datosabiertos@desarrollosocial.gob.ar",
+        "name": "Ministerio de Desarrollo Social de la Naci\u00f3n"
+    },
+    "issued": "",
+    "modified": "2021-04-13T08:44:16Z",
+    "language": [
+        "spa"
+    ],
+    "license": "cc-nc",
+    "homepage": "https://datosabiertos.desarrollosocial.gob.ar/",
+    "rights": "",
+    "spatial": [
+        "ARG"
+    ],
+    "themeTaxonomy": [],
+    "dataset": [
+        {
+            "title": "potenciar",
+            "description": "Descripci\u00f3n del dataset",
+            "modified": "2021-04-12T23:55:24.623747",
+            "identifier": "22bf53b3-459d-4e63-9f41-1e154a2bd5d9",
+            "issued": "2021-04-11T20:52:40.274239",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "mds@mds.com",
+                "name": "MDS"
+            },
+            "contactPoint": {
+                "fn": "MDS Mantenedor",
+                "hasEmail": "mds@mds.com"
+            },
+            "distribution": [
+                {
+                    "identifier": "641d4349-3683-4640-a69e-eb4b2ce83d51",
+                    "format": "CSV",
+                    "title": "memes",
+                    "description": "Descripci\u00f3n del archivo",
+                    "type": "file.upload",
+                    "issued": "2021-04-11T20:53:04.924726",
+                    "modified": "2021-04-11T20:53:04.911586",
+                    "license": "cc-by",
+                    "accessURL": "http://127.0.0.1:5000/dataset/22bf53b3-459d-4e63-9f41-1e154a2bd5d9/resource/641d4349-3683-4640-a69e-eb4b2ce83d51",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Nombre del Centro de Referencia",
+                            "title": "titulo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Direcci\u00f3n del Centro de Referencia",
+                            "title": "direccion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Tel\u00e9fono del Centro de Referencia",
+                            "title": "telefono"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Emails de contacto del Centro de Referencia",
+                            "title": "email"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Provincia d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Localidad d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "geo_point",
+                            "description": "Punto geogr\u00e1fico",
+                            "title": "latitud_longitud"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Sitio web del Centro de Referencia",
+                            "title": "sitio_web"
+                        }
+                    ],
+                    "downloadURL": "http://127.0.0.1:5000/dataset/22bf53b3-459d-4e63-9f41-1e154a2bd5d9/resource/641d4349-3683-4640-a69e-eb4b2ce83d51/download/centros_de_referencia-2021-04-09.csv",
+                    "fileName": "centros_de_referencia-2021-04-09.csv"
+                }
+            ],
+            "keyword": [
+                "potenciar trabajo",
+                "prueba",
+                "tag1"
+            ],
+            "superTheme": [
+                "econ"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "titulo",
+            "description": "descripticon",
+            "modified": "2021-04-12T23:55:40.923085",
+            "identifier": "8ac0b582-b066-4ffe-81de-566a8f64c9d9",
+            "issued": "2021-03-28T00:14:55.563071",
+            "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/titulares-de-la-tarjeta-alimentar",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "auto@mds",
+                "name": "auto@mds"
+            },
+            "contactPoint": {
+                "fn": "man@mds",
+                "hasEmail": "man@mds"
+            },
+            "distribution": [
+                {
+                    "identifier": "211018a0-907b-47de-90f3-64bdd10976dc",
+                    "format": "CSV",
+                    "title": "potenciar-trabajo-total-titulares-2020-12-31.csv",
+                    "description": "descripcion dataset",
+                    "type": "file.upload",
+                    "issued": "2021-03-28T00:15:15.981856",
+                    "modified": "2021-04-10T20:52:23.362487",
+                    "license": "cc-by",
+                    "accessURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/211018a0-907b-47de-90f3-64bdd10976dc",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Nombre del Centro de Referencia",
+                            "title": "titulo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Direcci\u00f3n del Centro de Referencia",
+                            "title": "direccion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Tel\u00e9fono del Centro de Referencia",
+                            "title": "telefono"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Emails de contacto del Centro de Referencia",
+                            "title": "email"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Provincia d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Localidad d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "geo_point",
+                            "description": "Punto geogr\u00e1fico",
+                            "title": "latitud_longitud"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Sitio web del Centro de Referencia",
+                            "title": "sitio_web"
+                        }
+                    ],
+                    "downloadURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/211018a0-907b-47de-90f3-64bdd10976dc/download/centro_de_desarrollo_infantil-2021-04-09.csv",
+                    "fileName": "centro_de_desarrollo_infantil-2021-04-09.csv"
+                },
+                {
+                    "identifier": "25b51fda-2f0e-42f3-85fe-bd85629c619a",
+                    "format": "XLSX",
+                    "title": "recurso 2",
+                    "description": "recurso 2",
+                    "type": "file.upload",
+                    "issued": "2021-03-28T00:15:38.307694",
+                    "modified": "2021-03-28T00:15:38.284220",
+                    "license": "cc-by",
+                    "accessURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/25b51fda-2f0e-42f3-85fe-bd85629c619a",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Nombre del Centro de Referencia",
+                            "title": "titulo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Direcci\u00f3n del Centro de Referencia",
+                            "title": "direccion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Tel\u00e9fono del Centro de Referencia",
+                            "title": "telefono"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Emails de contacto del Centro de Referencia",
+                            "title": "email"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Provincia d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Localidad d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "geo_point",
+                            "description": "Punto geogr\u00e1fico",
+                            "title": "latitud_longitud"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Sitio web del Centro de Referencia",
+                            "title": "sitio_web"
+                        }
+                    ],
+                    "downloadURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/25b51fda-2f0e-42f3-85fe-bd85629c619a/download/monotributo-detalle-pagos-1.xlsx",
+                    "fileName": "monotributo-detalle-pagos-1.xlsx"
+                }
+            ],
+            "keyword": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "superTheme": [
+                "REGI",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        }
+    ]
+}

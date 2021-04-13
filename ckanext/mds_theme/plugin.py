@@ -7,6 +7,34 @@ def str_to_dict(source_str):
 
     return ast.literal_eval(source_str)
 
+def freq_to_text(update_freq):
+    '''Return a dict list from a custom field string.'''
+
+    upds = {
+        'R/P10Y': 'Cada diez años',
+        'R/P4Y': 'Cada cuatro años',
+        'R/P3Y': 'Cada tres años',
+        'R/P2Y': 'Cada dos años',
+        'R/P1Y': 'Anualmente',
+        'R/P6M': 'Cada medio año',
+        'R/P4M': 'Cuatrimestralmente',
+        'R/P3M': 'Trimestralmente',
+        'R/P2M': 'Bimestralmente',
+        'R/P1M': 'Mensualmente',
+        'R/P0.5M': 'Cada 15 días',
+        'R/P0.33M': 'Tres veces por mes',
+        'R/P1W': 'Semanalmente',
+        'R/P0.5W': 'Dos veces a la semana',
+        'R/P0.33W': 'Tres veces a la semana',
+        'R/P1D': 'Diariamente',
+        'R/PT1H': 'Cada hora',
+        'R/PT1S': 'Continuamente actualizado',
+        'eventual': 'Eventual'
+    }
+
+    return upds[update_freq]
+
+
 class MdsThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -22,7 +50,5 @@ class MdsThemePlugin(plugins.SingletonPlugin):
         helper function.
 
         '''
-        # Template helper function names should begin with the name of the
-        # extension they belong to, to avoid clashing with functions from
-        # other extensions.
-        return {'astr_to_dict': str_to_dict}
+        return {'astr_to_dict': str_to_dict, 'freq_to_text': freq_to_text}
+
