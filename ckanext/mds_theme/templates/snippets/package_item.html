@@ -21,7 +21,7 @@ Example:
 {% block package_item %}
 <a class="panel panel-default" href="{{ h.url_for('%s.read' % package.type, id=package.name) }}">
   <div class="panel-body">
-    <h3>{{ package.display_name }}</h3>
+    <h3>{{ package.title }}</h3>
     <p class="text-muted">
       {% if notes %}
       <div>{{ notes }}</div>
@@ -37,6 +37,7 @@ Example:
         </ul>
 
     </p>
+
   </div>
 </a>
 

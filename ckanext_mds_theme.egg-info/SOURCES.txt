@@ -41,6 +41,7 @@ ckanext/mds_theme/templates/package/new_resource_not_draft.html
 ckanext/mds_theme/templates/package/read.html
 ckanext/mds_theme/templates/package/read_base.html
 ckanext/mds_theme/templates/package/resource_edit.html
+ckanext/mds_theme/templates/package/resource_edit_base.html
 ckanext/mds_theme/templates/package/resource_read.html
 ckanext/mds_theme/templates/package/search.html
 ckanext/mds_theme/templates/package/snippets/additional_info.html
@@ -68,6 +69,7 @@ ckanext/mds_theme/templates/package/snippets/tags.html
 ckanext/mds_theme/templates/package/snippets/view_form.html
 ckanext/mds_theme/templates/package/snippets/view_form_filters.html
 ckanext/mds_theme/templates/package/snippets/view_help.html
+ckanext/mds_theme/templates/snippets/breadcrumb.html
 ckanext/mds_theme/templates/snippets/facet_list.html
 ckanext/mds_theme/templates/snippets/package_item.html
 ckanext/mds_theme/templates/snippets/package_list.html

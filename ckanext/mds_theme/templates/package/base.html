@@ -23,7 +23,7 @@
           {% endblock %}
 
           {% block primary %}
-          <div class="col-md-8">
+          <div class="col-md-12">
             {% block toolbar %}
             {% block breadcrumb %}
             {% if self.breadcrumb_content() | trim %}
@@ -35,6 +35,7 @@
                 </a>
               </li>
               {% block breadcrumb_content %}
+
               {% if pkg %}
               {% set dataset = h.dataset_display_name(pkg) %}
               {% if pkg.organization %}
@@ -58,6 +59,7 @@
             {% endblock %}
 
             {% endblock %}
+            {% block content_primary_nav %}{% endblock %}
             {% block primary_content %}{% endblock %}
             {% block primary_content_inner %}{% endblock %}
           </div>
