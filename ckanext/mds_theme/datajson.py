@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from pydatajson import DataJson
 from pydatajson.writers import write_xlsx_catalog
 
-SITE_URL = 'http://127.0.0.1:5000'
+SITE_URL = 'http://186.139.179.245'
 
 BASE_DICT = {
     "version": "1.1",
