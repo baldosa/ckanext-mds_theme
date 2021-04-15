@@ -44,7 +44,7 @@ def gen_datasetinfo(dataset_id):
     dataset_info
     
     dataset = {
-        'title': dataset_info['name'],
+        'title': dataset_info['title'],
         'description': dataset_info['notes'],
         'modified': dataset_info['metadata_modified'],
         "identifier": dataset_info['id'],
@@ -110,4 +110,4 @@ if __name__ == '__main__':
     with open(f'{os.path.abspath(os.path.dirname(__file__))}/public/data.json', 'w') as outfile:
         json.dump(BASE_DICT, outfile, indent=4)
 
-    write_xlsx_catalog(BASE_DICT, f'{os.path.abspath(os.path.dirname(__file__))}/public/data.json')
+    # write_xlsx_catalog(BASE_DICT, f'{os.path.abspath(os.path.dirname(__file__))}/public/data.json')
