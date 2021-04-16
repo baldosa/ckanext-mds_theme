@@ -36,7 +36,10 @@ ckanext/mds_theme/templates/page.html
 ckanext/mds_theme/templates/home/index.html
 ckanext/mds_theme/templates/home/snippets/search.html
 ckanext/mds_theme/templates/package/base.html
+ckanext/mds_theme/templates/package/base_form_page.html
 ckanext/mds_theme/templates/package/edit.html
+ckanext/mds_theme/templates/package/edit_base.html
+ckanext/mds_theme/templates/package/new.html
 ckanext/mds_theme/templates/package/new_resource_not_draft.html
 ckanext/mds_theme/templates/package/read.html
 ckanext/mds_theme/templates/package/read_base.html
