@@ -148,12 +148,12 @@ h.resource_display_name(res) }}{% endblock %}
   {% if pkg.extras %}
   {% for extra in pkg.extras %}
   {% if extra.key in ('fields') and extra.value and extra.value|length > 0 %}
-  <div class="row">
+  <div class="row m-x-3">
     <h5 class="row-title">
       Campos del archivo
     </h5>
     <div class="row-value">
-      <table class="table table-responsive-poncho">
+      <table class="table table-responsive-poncho p-y-2">
         <thead>
           <th>Nombre del campo</th>
           <th>Tipo de dato</th>
