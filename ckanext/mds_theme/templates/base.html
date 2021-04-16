@@ -29,11 +29,29 @@
     #}
     {%- block meta -%}
     <meta charset="utf-8" />
-    {% block meta_generator %}
-    <meta name="generator" content="ckan {{ h.ckan_version() }}" />{% endblock %}
     {% block meta_viewport %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %}
     {%- endblock -%}
+    <!-- Primary Meta Tags -->
+    <title>Datos Abiertos del Ministerio de Desarrollo Social de la Nación</title>
+    <meta name="title" content="Datos Abiertos del Ministerio de Desarrollo Social de la Nación">
+    <meta name="description" content="Ponemos a tu alcance datos públicos del Ministerio de Desarrollo Social de la Nación en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a través de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.
+    ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://datosabiertos.desarrollosocial.gob.ar/">
+    <meta property="og:title" content="Datos Abiertos del Ministerio de Desarrollo Social de la Nación">
+    <meta property="og:description" content="Ponemos a tu alcance datos públicos del Ministerio de Desarrollo Social de la Nación en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a través de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.
+    ">
+
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://datosabiertos.desarrollosocial.gob.ar/">
+    <meta property="twitter:title" content="Datos Abiertos del Ministerio de Desarrollo Social de la Nación">
+    <meta property="twitter:description" content="Ponemos a tu alcance datos públicos del Ministerio de Desarrollo Social de la Nación en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a través de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.
+    ">
 
     {#
     Add a custom title to the page by extending the title block. Call super()

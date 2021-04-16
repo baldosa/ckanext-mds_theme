@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from pydatajson import DataJson
 from pydatajson.writers import write_xlsx_catalog
 
-SITE_URL = 'http://186.139.179.245'
+SITE_URL = 'https://datosabiertos.desarrollosocial.gob.ar/'
 
 BASE_DICT = {
     "version": "1.1",
