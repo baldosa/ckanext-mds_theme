@@ -103,6 +103,7 @@ if __name__ == '__main__':
 
     datasets = []
     for d in datasets_id:
+        print(d)
         datasets.append(gen_datasetinfo(d))
 
 
