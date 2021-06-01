@@ -1,4 +1,4 @@
-[![Tests](https://github.com//ckanext-mds_theme/workflows/Tests/badge.svg?branch=main)](https://github.com//ckanext-mds_theme/actions)
+[![Tests](https://github.com/baldosa/ckanext-mds_theme/workflows/Tests/badge.svg?branch=main)](https://github.com//ckanext-mds_theme/actions)
 
 # ckanext-mds_theme
 
