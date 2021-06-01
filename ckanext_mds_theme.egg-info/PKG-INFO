@@ -6,7 +6,7 @@ Home-page: https://github.com//ckanext-mds_theme
 Author: Ema Guillen
 Author-email: ema@guillen.com.ar
 License: AGPL
-Description: [![Tests](https://github.com//ckanext-mds_theme/workflows/Tests/badge.svg?branch=main)](https://github.com//ckanext-mds_theme/actions)
+Description: [![Tests](https://github.com/baldosa/ckanext-mds_theme/workflows/Tests/badge.svg?branch=main)](https://github.com//ckanext-mds_theme/actions)
         
         # ckanext-mds_theme
         
