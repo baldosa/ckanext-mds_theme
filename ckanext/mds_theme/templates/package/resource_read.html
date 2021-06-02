@@ -148,7 +148,7 @@ h.resource_display_name(res) }}{% endblock %}
   {% if pkg.extras %}
   {% for extra in pkg.extras %}
   {% if extra.key in ('fields') and extra.value and extra.value|length > 0 %}
-  <div class="row m-x-3">
+  <div class="row resource-fields">
     <h5 class="row-title">
       Campos del archivo
     </h5>

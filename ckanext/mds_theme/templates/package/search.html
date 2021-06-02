@@ -73,7 +73,7 @@
 
     {% block secondary_content %}
     <div class="filters">
-      <div>
+      <div class="m-t-2">
         {% for facet in facet_titles %}
         {{ h.snippet('snippets/facet_list.html', title=facet_titles[facet], name=facet, search_facets={'organization': search_facets['organization'], 'tags': search_facets['tags']}) }}
         {% endfor %}
