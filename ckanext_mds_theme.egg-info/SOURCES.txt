@@ -43,6 +43,7 @@ ckanext/mds_theme/templates/package/read.html
 ckanext/mds_theme/templates/package/read_base.html
 ckanext/mds_theme/templates/package/resource_edit_base.html
 ckanext/mds_theme/templates/package/resource_read.html
+ckanext/mds_theme/templates/package/resource_views.html
 ckanext/mds_theme/templates/package/search.html
 ckanext/mds_theme/templates/package/snippets/additional_info.html
 ckanext/mds_theme/templates/package/snippets/resource_item.html
