@@ -45,6 +45,11 @@
     {% endblock %}
     <hr>
   {% endblock %}
+  {% block extras %}
+  <tr>
+    <td class="dataset-details">{{ pkg_dict.custom_text }}</td>
+  </tr>
+  {% endblock %}
   {% block package_resources %}
     {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources, is_activity_archive=is_activity_archive %}
   {% endblock %}

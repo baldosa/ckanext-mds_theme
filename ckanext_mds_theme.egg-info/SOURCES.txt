@@ -46,6 +46,7 @@ ckanext/mds_theme/templates/package/resource_read.html
 ckanext/mds_theme/templates/package/resource_views.html
 ckanext/mds_theme/templates/package/search.html
 ckanext/mds_theme/templates/package/snippets/additional_info.html
+ckanext/mds_theme/templates/package/snippets/package_basic_fields.html
 ckanext/mds_theme/templates/package/snippets/resource_item.html
 ckanext/mds_theme/templates/package/snippets/resources_list.html
 ckanext/mds_theme/templates/snippets/breadcrumb.html
