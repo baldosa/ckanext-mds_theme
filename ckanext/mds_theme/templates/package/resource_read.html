@@ -144,7 +144,6 @@ h.resource_display_name(res) }}{% endblock %}
   <a class="btn btn-success" href="{{res.url}}"><i class="fa fa-download"></i> Descargar</a>
   <hr>
   {% endblock %}
-
   {% if pkg.extras %}
   {% for extra in pkg.extras %}
   {% if extra.key in ('fields') and extra.value and extra.value|length > 0 %}

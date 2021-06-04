@@ -56,8 +56,15 @@ class MdsThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     def _modify_package_schema(self, schema):
         schema.update({
-            'custom_text': [toolkit.get_validator('ignore_missing'),
-                            toolkit.get_converter('convert_to_extras')]
+            'super_theme': [toolkit.get_converter('convert_to_extras'),
+                            toolkit.get_validator('ignore_missing')]
+        })
+        schema.update({
+            'update_frequency': [toolkit.get_converter('convert_to_extras'),
+                            toolkit.get_validator('ignore_missing')]
+        })
+        schema['resources'].update({
+                'file_fields_dict' : [ toolkit.get_validator('ignore_missing') ]
         })
         return schema
 
@@ -75,8 +82,15 @@ class MdsThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     def show_package_schema(self):
         schema = super(MdsThemePlugin, self).show_package_schema()
         schema.update({
-            'custom_text': [toolkit.get_converter('convert_from_extras'),
+            'super_theme': [toolkit.get_converter('convert_from_extras'),
                             toolkit.get_validator('ignore_missing')]
+        })
+        schema.update({
+            'update_frequency': [toolkit.get_converter('convert_from_extras'),
+                            toolkit.get_validator('ignore_missing')]
+        })
+        schema['resources'].update({
+                'file_fields_dict' : [ toolkit.get_validator('ignore_missing') ]
         })
         return schema
 
