@@ -78,21 +78,36 @@ def gen_resources(dataset_info):
     resources = dataset_info['resources']
     datasets = []
     for r in resources:
-        datasets.append({
-            "identifier": r['id'],
-            "format": r['format'],
-            "title": r['name'],
-            "description": r['description'],
-            "type": "file.upload",
-            "issued": r['created'],
-            "modified": r['last_modified'],
-            "license": "cc-by",
-            "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
-            "field": ast.literal_eval(list(item['value'] for item in dataset_info['extras']
-                                        if item['key'] == 'fields')[0]),
-            "downloadURL": r['url'],
-            "fileName": os.path.basename(urlparse(r['url']).path)
-        })
+        try:
+            datasets.append({
+                "identifier": r['id'],
+                "format": r['format'],
+                "title": r['name'],
+                "description": r['description'],
+                "type": "file.upload",
+                "issued": r['created'],
+                "modified": r['last_modified'],
+                "license": "cc-by",
+                "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
+                "field": ast.literal_eval(list(item['value'] for item in dataset_info['extras']
+                                            if item['key'] == 'fields')[0]),
+                "downloadURL": r['url'],
+                "fileName": os.path.basename(urlparse(r['url']).path)
+            })
+        except:
+            datasets.append({
+                "identifier": r['id'],
+                "format": r['format'],
+                "title": r['name'],
+                "description": r['description'],
+                "type": "file.upload",
+                "issued": r['created'],
+                "modified": r['last_modified'],
+                "license": "cc-by",
+                "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
+                "downloadURL": r['url'],
+                "fileName": os.path.basename(urlparse(r['url']).path)
+            })
     return datasets
 
 
