@@ -78,7 +78,7 @@ h.resource_display_name(res) }}{% endblock %}
           Tamaño
         </div>
         <div class="row-value">
-          {{ res.Tamaño or _('unknown') }}
+          {{ res.size or _('unknown') }} bytes
         </div>
       </div>
       <div class="row">
@@ -137,6 +137,7 @@ h.resource_display_name(res) }}{% endblock %}
   {% block package_notes %}
   {% if pkg.notes %}
   <div class="lead">
+        {{ res }}
     {{ h.render_markdown(h.get_translated(res, 'description')) }}
   </div>
   {% endif %}
@@ -144,9 +145,7 @@ h.resource_display_name(res) }}{% endblock %}
   <a class="btn btn-success" href="{{res.url}}"><i class="fa fa-download"></i> Descargar</a>
   <hr>
   {% endblock %}
-  {% if pkg.extras %}
-  {% for extra in pkg.extras %}
-  {% if extra.key in ('fields') and extra.value and extra.value|length > 0 %}
+  {% if res.file_fields_dict %}
   <div class="row resource-fields">
     <h5 class="row-title">
       Campos del archivo
@@ -160,7 +159,7 @@ h.resource_display_name(res) }}{% endblock %}
         </thead>
         <tbody>
           
-            {% for row in h.astr_to_dict(h.get_pkg_dict_extra(pkg, 'fields')) %}
+            {% for row in h.astr_to_dict(res.file_fields_dict) %}
             <tr>
               <td>{{row.title}}</td>
               <td>{{row.type}}</td>
@@ -173,8 +172,6 @@ h.resource_display_name(res) }}{% endblock %}
     </div>
   </div>
   {% endif %}
-  {% endfor %}
-  {% endif %}
   {#
   {% block resources_list %}
   {% snippet "package/snippets/resources.html", pkg=pkg, active=res.id, action='read',
@@ -185,3 +182,4 @@ h.resource_display_name(res) }}{% endblock %}
 
 </div>
 {% endblock %}
+

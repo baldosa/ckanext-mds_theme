@@ -7,15 +7,18 @@ error=errors.title, classes=['control-full', 'control-large'], attrs={'data-modu
 {% endblock %}
 
 {% block package_basic_fields_url %}
-{% set prefix = h.url_for('dataset.read', id='') %}
-{% set domain = h.url_for('dataset.read', id='', qualified=true) %}
+{% set prefix = h.url_for(controller='dataset', action='read', id='') %}
+{% set domain = h.url_for(controller='dataset', action='read', id='', qualified=true) %}
 {% set domain = domain|replace("http://", "")|replace("https://", "") %}
-{% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>
-  ', 'class': 'form-control input-sm'} %}
 
-  {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'),
-  value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
-  {% endblock %}
+  {% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>
+    ', 'class': 'form-control input-sm'} %}
+
+
+{{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
+{% endblock %}
+
+
 
   {% block package_basic_fields_custom %}{% endblock %}
 
@@ -139,33 +142,74 @@ error=errors.title, classes=['control-full', 'control-large'], attrs={'data-modu
   </div>
   {% endif %}
   {# custom fields #}
-  {{ form.input('super_theme', label=_('Super Theme'), id='field-super_theme', placeholder=_(' '),
-  value=data.super_theme, error=errors.super_theme, classes=['control-medium']) }}
+  
+  <div class="form-group">
+    {% set superThemeOpts = [
+        {'value': 'AGRI', 'text': 'Agroganadería, pesca y forestación'},
+        {'value': 'ECON', 'text': 'Economía y finanzas'},
+        {'value': 'EDUC', 'text': 'Educación, cultura y deportes'},
+        {'value': 'ENER', 'text': 'Energía'},
+        {'value': 'ENVI', 'text': 'Medio ambiente'},
+        {'value': 'GOVE', 'text': 'Gobierno y sector público'},
+        {'value': 'HEAL', 'text': 'Salud'},
+        {'value': 'INTR', 'text': 'Asuntos internacionales'},
+        {'value': 'JUST', 'text': 'Justicia, seguridad y legales'},
+        {'value': 'REGI', 'text': 'Regiones y ciudades'},
+        {'value': 'SOCI', 'text': 'Población y sociedad'},
+        {'value': 'TECH', 'text': 'Ciencia y tecnología'},
+        {'value': 'TRAN', 'text': 'Transporte'}
+      ]
+    %}
+    <label class="control-label" for="field-super_theme">Super Theme</label>
+    <div class="controls">
+      <div class="row">
+        <div class="col-md-6">
+          <select id="field-super_theme" name="super_theme" data-module="autocomplete" multiple>
+            {% if data.super_theme %}
+            {% set existing_super_theme = data.super_theme %}
+            {% endif %}
+            {% for item in superThemeOpts %}
+            <option value="{{ item['value'] }}" {% if item['value'] in existing_super_theme %}selected="selected" {% endif %}>{{
+              item['text'] }}</option>
+            {% endfor %}
+          </select>
+          {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
+        </div>
+        <div class="col-md-6">
+          <span class="info-block info-inline">
+            <i class="fa fa-info-circle"></i>
+            Definiciones de super theme en <a href="https://datosgobar.github.io/paquete-apertura-datos/perfil-metadatos/#anexo-ii-taxonomia-tematica">el perfil de aplicación nacional de metadatos
+            </a>
+
+          </span>
+        </div>
+      </div>
+    </div>
 
   {{ form.select('update_frequency', 
       label=_('Frequencia de actualización'), 
       id='field-update_frequency',
       selected=data.update_frequency,
       error=errors.update_frequency,
-      options=[{'name': 'R/P10Y', 'value': 'Cada diez años'},
-        {'name': 'R/P4Y', 'value': 'Cada cuatro años'},
-        {'name': 'R/P3Y', 'value': 'Cada tres años'},
-        {'name': 'R/P2Y', 'value': 'Cada dos años'},
-        {'name': 'R/P1Y', 'value': 'Anualmente'},
-        {'name': 'R/P6M', 'value': 'Cada medio año'},
-        {'name': 'R/P4M', 'value': 'Cuatrimestralmente'},
-        {'name': 'R/P3M', 'value': 'Trimestralmente'},
-        {'name': 'R/P2M', 'value': 'Bimestralmente'},
-        {'name': 'R/P1M', 'value': 'Mensualmente'},
-        {'name': 'R/P0.5M', 'value': 'Cada 15 días'},
-        {'name': 'R/P0.33M', 'value': 'Tres veces por mes'},
-        {'name': 'R/P1W', 'value': 'Semanalmente'},
-        {'name': 'R/P0.5W', 'value': 'Dos veces a la semana'},
-        {'name': 'R/P0.33W', 'value': 'Tres veces a la semana'},
-        {'name': 'R/P1D', 'value': 'Diariamente'},
-        {'name': 'R/PT1H', 'value': 'Cada hora'},
-        {'name': 'R/PT1S', 'value': 'Continuamente actualizado'},
-        {'name': 'eventual', 'value': 'Eventual'}
+      options=[{'value': 'R/P10Y', 'text': 'Cada diez años'},
+        {'value': 'R/P4Y', 'text': 'Cada cuatro años'},
+        {'value': 'R/P3Y', 'text': 'Cada tres años'},
+        {'value': 'R/P2Y', 'text': 'Cada dos años'},
+        {'value': 'R/P1Y', 'text': 'Anualmente'},
+        {'value': 'R/P6M', 'text': 'Cada medio año'},
+        {'value': 'R/P4M', 'text': 'Cuatrimestralmente'},
+        {'value': 'R/P3M', 'text': 'Trimestralmente'},
+        {'value': 'R/P2M', 'text': 'Bimestralmente'},
+        {'value': 'R/P1M', 'text': 'Mensualmente'},
+        {'value': 'R/P0.5M', 'text': 'Cada 15 días'},
+        {'value': 'R/P0.33M', 'text': 'Tres veces por mes'},
+        {'value': 'R/P1W', 'text': 'Semanalmente'},
+        {'value': 'R/P0.5W', 'text': 'Dos veces a la semana'},
+        {'value': 'R/P0.33W', 'text': 'Tres veces a la semana'},
+        {'value': 'R/P1D', 'text': 'Diariamente'},
+        {'value': 'R/PT1H', 'text': 'Cada hora'},
+        {'value': 'R/PT1S', 'text': 'Continuamente actualizado'},
+        {'value': 'eventual', 'text': 'Eventual'}
       ],
       classes=['control-medium']
     ) }}

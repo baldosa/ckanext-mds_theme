@@ -1,6 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import ast
+import json
 
 def str_to_dict(source_str):
     '''Return a dict list from a custom field string.'''
@@ -34,6 +35,33 @@ def freq_to_text(update_freq):
 
     return upds[update_freq]
 
+def json_loads(json_string):
+    return json.loads(json_string)
+
+def field_types():
+    types = [
+        ("string", u"Texto (string)"),
+        ("integer", u"Número entero (integer)"),
+        ("number", u"Número decimal (number)"),
+        ("boolean", u"Verdadero/falso (boolean)"),
+        ("time", u"Tiempo ISO-8601 (time)"),
+        ("date", u"Fecha ISO-8601 (date)"),
+        ("date-time", u"Fecha y hora ISO-8601 (date-time)"),
+        ("object", u"JSON (object)"),
+        ("geojson", u"GeoJSON (geojson)"),
+        ("geo_point", u"GeoPoint (geo_point)"),
+        ("array", u"Lista de valores en formato JSON (array)"),
+        ("binary", u"Valor binario en base64 (binary)"),
+        ("any", u"Otro (any)")
+    ]
+
+    # if field_type_id:
+    #     filtered_field_type = [t for t in types if t[0] == field_type_id]
+    #     if filtered_field_type:
+    #         return filtered_field_type[0]
+    #     return None
+
+    return types
 
 class MdsThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     plugins.implements(plugins.IConfigurer)
@@ -52,7 +80,12 @@ class MdsThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         helper function.
 
         '''
-        return {'astr_to_dict': str_to_dict, 'freq_to_text': freq_to_text}
+        return {
+            'astr_to_dict': str_to_dict, 
+            'freq_to_text': freq_to_text, 
+            'json_loads': json_loads,
+            'field_types': field_types
+            }
 
     def _modify_package_schema(self, schema):
         schema.update({
