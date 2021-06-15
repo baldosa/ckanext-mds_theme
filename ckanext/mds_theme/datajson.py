@@ -11,10 +11,11 @@ from pydatajson import DataJson
 from pydatajson.writers import write_xlsx_catalog
 
 SITE_URL = 'https://datosabiertos.desarrollosocial.gob.ar/'
+# SITE_URL = 'http://localhost:5000/'
 
 BASE_DICT = {
     "version": "1.1",
-    "identifier": "",
+    "identifier": "desarrollo-social",
     "title": "Datos abiertos del Ministerio de Desarrollo Social",
     "description": "Ponemos a tu alcance datos públicos del Ministerio de Desarrollo Social de la Nación en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a través de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.",
     "superThemeTaxonomy": "http://datos.gob.ar/superThemeTaxonomy.json",
@@ -36,13 +37,10 @@ BASE_DICT = {
     "themeTaxonomy": [],
 }
 
-
 def gen_datasetinfo(dataset_id):
     dataset_url = f'{SITE_URL}/api/3/action/package_show?id={dataset_id}'
     r = requests.get(dataset_url)
     dataset_info = r.json()['result']
-    dataset_info
-    
     dataset = {
         'title': dataset_info['title'],
         'description': dataset_info['notes'],
@@ -64,10 +62,8 @@ def gen_datasetinfo(dataset_id):
         },
         "distribution": gen_resources(dataset_info),
         "keyword": list(tag['name'] for tag in dataset_info['tags']),
-        "superTheme": ast.literal_eval(list(item['value'] for item in dataset_info['extras']
-                                            if item['key'] == 'superTheme')[0]),
-        "accrualPeriodicity": list(item['value'] for item in dataset_info['extras']
-                                if item['key'] == 'updateFrequency')[0],
+        "superTheme": dataset_info['super_theme'].replace('{','').replace('}','').split(','),
+        "accrualPeriodicity": dataset_info['update_frequency'],
         "language": [
             "spa"
         ]
@@ -79,38 +75,28 @@ def gen_resources(dataset_info):
     datasets = []
     for r in resources:
         try:
-            datasets.append({
-                "identifier": r['id'],
-                "format": r['format'],
-                "title": r['name'],
-                "description": r['description'],
-                "type": "file.upload",
-                "issued": r['created'],
-                "modified": r['last_modified'],
-                "license": "cc-by",
-                "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
-                "field": ast.literal_eval(list(item['value'] for item in dataset_info['extras']
-                                            if item['key'] == 'fields')[0]),
-                "downloadURL": r['url'],
-                "fileName": os.path.basename(urlparse(r['url']).path)
-            })
+            fields = ast.literal_eval(r['file_fields_dict'])
         except:
-            datasets.append({
-                "identifier": r['id'],
-                "format": r['format'],
-                "title": r['name'],
-                "description": r['description'],
-                "type": "file.upload",
-                "issued": r['created'],
-                "modified": r['last_modified'],
-                "license": "cc-by",
-                "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
-                "downloadURL": r['url'],
-                "fileName": os.path.basename(urlparse(r['url']).path)
-            })
+            fields = []
+        
+        datasets.append({
+            "identifier": r['id'],
+            "format": r['format'],
+            "title": r['name'],
+            "description": r['description'],
+            "type": "file.upload",
+            "issued": r['created'],
+            "modified": r['last_modified'],
+            "license": "cc-by",
+            "accessURL": f"{SITE_URL}/dataset/{dataset_info['id']}/resource/{r['id']}",
+            "field": fields,
+            "downloadURL": r['url'],
+            "fileName": os.path.basename(urlparse(r['url']).path)
+        })
+
     return datasets
 
-
+#%%
 if __name__ == '__main__':
     datasets_url = f'{SITE_URL}/api/3/action/package_list'
     r = requests.get(datasets_url)
@@ -127,3 +113,4 @@ if __name__ == '__main__':
         json.dump(BASE_DICT, outfile, indent=4)
 
     # write_xlsx_catalog(BASE_DICT, f'{os.path.abspath(os.path.dirname(__file__))}/public/data.json')
+

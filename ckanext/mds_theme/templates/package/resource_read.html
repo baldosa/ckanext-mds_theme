@@ -137,7 +137,6 @@ h.resource_display_name(res) }}{% endblock %}
   {% block package_notes %}
   {% if pkg.notes %}
   <div class="lead">
-        {{ res }}
     {{ h.render_markdown(h.get_translated(res, 'description')) }}
   </div>
   {% endif %}
