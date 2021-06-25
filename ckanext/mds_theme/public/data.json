@@ -1,6 +1,6 @@
 {
     "version": "1.1",
-    "identifier": "",
+    "identifier": "desarrollo-social",
     "title": "Datos abiertos del Ministerio de Desarrollo Social",
     "description": "Ponemos a tu alcance datos p\u00fablicos del Ministerio de Desarrollo Social de la Naci\u00f3n en formatos abiertos de modo que puedas usarlos y compartirlos. Te proponemos, a trav\u00e9s de este portal, tener un punto de encuentro entre el ministerio, las organizaciones de la sociedad civil y los ciudadanos.",
     "superThemeTaxonomy": "http://datos.gob.ar/superThemeTaxonomy.json",
@@ -9,7 +9,7 @@
         "name": "Ministerio de Desarrollo Social de la Naci\u00f3n"
     },
     "issued": "",
-    "modified": "2021-04-15T13:08:12Z",
+    "modified": "2021-06-15T18:17:44Z",
     "language": [
         "spa"
     ],
@@ -22,47 +22,45 @@
     "themeTaxonomy": [],
     "dataset": [
         {
-            "title": "Cr\u00e9ditos otorgados por la CONAMI",
-            "description": "Cantidad de microcr\u00e9ditos y capital otorgado por organizaciones administradoras inscriptas en el Registro Nacional de Instituciones de Microcr\u00e9dito, agrupados por mes de otorgamiento, provincia, departamento y localidad.\r\n\r\n",
-            "modified": "2021-04-15T15:25:33.598287",
-            "identifier": "22bf53b3-459d-4e63-9f41-1e154a2bd5d9",
-            "issued": "2021-04-11T20:52:40.274239",
-            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/conami",
+            "title": "Hacemos Futuro (2018-2020)",
+            "description": "Datos correspondientes a los titulares del Programa Hacemos Futuro, creado por RESOL-2018-96-APN-MDS. Este programa unific\u00f3 a los titulares de las dos l\u00edneas del Programa Ingreso Social con Trabajo. Vigente entre febrero 2018 y febrero 2020.",
+            "modified": "2021-06-15T21:16:57.908204",
+            "identifier": "2961336b-d95c-4967-a88f-cfda923b21d6",
+            "issued": "2021-04-17T15:58:57.662256",
+            "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/hf",
             "license": "Creative Commons Attribution",
             "spatial": [
                 "ARG"
             ],
             "publisher": {
-                "mbox": "datsoabiertos@desarrollosocial.gob.ar",
-                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social, Comisi\u00f3n Nacional de Microcr\u00e9dito"
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social."
             },
             "contactPoint": {
-                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica ",
-                "hasEmail": "datsoabiertos@desarrollosocial.gob.ar"
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
             },
             "distribution": [
                 {
-                    "identifier": "641d4349-3683-4640-a69e-eb4b2ce83d51",
+                    "identifier": "4e3eb1e8-7050-4dbe-805c-192d0479839d",
                     "format": "CSV",
-                    "title": "Cr\u00e9ditos ortorgados",
-                    "description": "Cantidad de microcr\u00e9ditos y capital otorgado por organizaciones administradoras, agrupados por mes de otorgamiento, provincia, departamento y localidad.\r\n\r\n",
+                    "title": "Titulares activos por mes y departamento Hacemos Futuro",
+                    "description": "Datos correspondientes a los titulares activos por mes y departamento del Programa Hacemos Futuro.",
                     "type": "file.upload",
-                    "issued": "2021-04-11T20:53:04.924726",
-                    "modified": "2021-04-15T14:25:01.773416",
+                    "issued": "2021-04-17T16:00:02.555914",
+                    "modified": "2021-04-17T16:00:02.505515",
                     "license": "cc-by",
-                    "accessURL": "http://127.0.0.1:5000/dataset/22bf53b3-459d-4e63-9f41-1e154a2bd5d9/resource/641d4349-3683-4640-a69e-eb4b2ce83d51",
+                    "accessURL": "http://localhost:5000//dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d",
                     "field": [
                         {
-                            "specialType": "time_index",
-                            "specialTypeDetail": "R/P1M",
                             "type": "date",
-                            "description": "Periodo de tiempo analizado ",
-                            "title": "indice_tiempo"
+                            "description": "Periodo de tiempo analizado. La l\u00ednea program\u00e1tica estuvo vigente entre mayo 2013 y enero 2018",
+                            "title": "periodo"
                         },
                         {
                             "type": "string",
-                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
-                            "title": "codigo_indec_provincia"
+                            "description": "C\u00f3digo de provincia codificado seg\u00f1n la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_provincia"
                         },
                         {
                             "type": "string",
@@ -71,8 +69,8 @@
                         },
                         {
                             "type": "string",
-                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina",
-                            "title": "codigo_indec_departamento"
+                            "description": "C\u00f3digo de departamento codificado seg\u00f1n la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina",
+                            "title": "cod_depto"
                         },
                         {
                             "type": "string",
@@ -80,119 +78,81 @@
                             "title": "departamento"
                         },
                         {
-                            "type": "string",
-                            "description": "C\u00f3digo de localidad codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina",
-                            "title": "codigo_indec_localidad"
-                        },
-                        {
-                            "type": "string",
-                            "description": "",
-                            "title": "localidad"
-                        },
-                        {
                             "type": "integer",
-                            "description": "Microcr\u00e9ditos otorgados",
-                            "title": "microcreditos"
-                        },
-                        {
-                            "type": "number",
-                            "description": "Capital otorgado por el total de cr\u00e9ditos",
-                            "title": "monto_microcreditos"
+                            "description": "Titulares que recibieron el subsidio. No puede calcularse el total de titulares \u00f1nicos sumando la columna  ",
+                            "title": "titulares_activos"
                         }
                     ],
-                    "downloadURL": "http://127.0.0.1:5000/dataset/22bf53b3-459d-4e63-9f41-1e154a2bd5d9/resource/641d4349-3683-4640-a69e-eb4b2ce83d51/download/microcreditos-20201231.xlsx",
-                    "fileName": "microcreditos-20201231.xlsx"
+                    "downloadURL": "http://localhost:5000/dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d/download/hacemos-futuro-titulares-activos-2020-02-29.csv",
+                    "fileName": "hacemos-futuro-titulares-activos-2020-02-29.csv"
                 }
             ],
-            "keyword": [
-                "CONAMI",
-                "ECONOMIA SOCIAL",
-                "MICROCREDITO",
-                "inclusion social"
-            ],
+            "keyword": [],
             "superTheme": [
-                "ECON",
-                "REGI",
-                "SOCI"
+                "EDUC",
+                "GOVE"
             ],
-            "accrualPeriodicity": "R/P3M",
+            "accrualPeriodicity": "R/P4M",
             "language": [
                 "spa"
             ]
         },
         {
-            "title": "Potenciar Trabajo",
-            "description": "Datos correspondientes a los titulares del Programa Nacional De Inclusion Socio-Productiva Y Desarrollo Local \u2013 \u201cPotenciar Trabajo\u201d, creado por RESOL-2020-121-APN-MDS.",
-            "modified": "2021-04-15T14:13:06.988248",
-            "identifier": "8ac0b582-b066-4ffe-81de-566a8f64c9d9",
-            "issued": "2021-03-28T00:14:55.563071",
-            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/potenciartrabajo",
+            "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales",
+            "description": "Datos de titulares del Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) - Ley 27.634.\r\n",
+            "modified": "2021-06-14T17:33:28.728971",
+            "identifier": "d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c",
+            "issued": "2021-06-11T16:09:08.673168",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/ninezyadolescencia/pae",
             "license": "Creative Commons Attribution",
             "spatial": [
                 "ARG"
             ],
             "publisher": {
                 "mbox": "datosabiertos@desarrollosocial.gob.ar",
-                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n."
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda Nacional de ni\u00f1ez, adolescencia y familia"
             },
             "contactPoint": {
-                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica ",
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
                 "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
             },
             "distribution": [
                 {
-                    "identifier": "211018a0-907b-47de-90f3-64bdd10976dc",
+                    "identifier": "05482f0d-8368-44c6-a06d-18c4312d0141",
                     "format": "CSV",
-                    "title": "potenciar-trabajo-total-titulares-2020-12-31.csv",
-                    "description": "descripcion dataset",
+                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales",
+                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa uno.",
                     "type": "file.upload",
-                    "issued": "2021-03-28T00:15:15.981856",
-                    "modified": "2021-04-10T20:52:23.362487",
+                    "issued": "2021-06-11T16:10:08.908317",
+                    "modified": "2021-06-11T16:10:08.879956",
                     "license": "cc-by",
-                    "accessURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/211018a0-907b-47de-90f3-64bdd10976dc",
-                    "field": [
-                        {
-                            "type": "string",
-                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
-                            "title": "codigo_indec_provincia"
-                        },
-                        {
-                            "type": "string",
-                            "description": "Nombre de la provincia  \n",
-                            "title": "provincia"
-                        },
-                        {
-                            "type": "string",
-                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
-                            "title": "codigo_indec_departamento"
-                        },
-                        {
-                            "type": "string",
-                            "description": "Nombre del departamento  \n",
-                            "title": "departamento"
-                        },
-                        {
-                            "type": "integer",
-                            "description": "Total de titulares por a\u00f1o y departamento ",
-                            "title": "titulares"
-                        }
-                    ],
-                    "downloadURL": "http://127.0.0.1:5000/dataset/8ac0b582-b066-4ffe-81de-566a8f64c9d9/resource/211018a0-907b-47de-90f3-64bdd10976dc/download/centro_de_desarrollo_infantil-2021-04-09.csv",
-                    "fileName": "centro_de_desarrollo_infantil-2021-04-09.csv"
+                    "accessURL": "http://localhost:5000//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141",
+                    "field": [],
+                    "downloadURL": "http://localhost:5000/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141/download/pae_etapa_1_2021-03-31.csv",
+                    "fileName": "pae_etapa_1_2021-03-31.csv"
+                },
+                {
+                    "identifier": "ba9ecf55-8760-42d5-9c85-b0e070871980",
+                    "format": "CSV",
+                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales - Etapa 2",
+                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa dos.",
+                    "type": "file.upload",
+                    "issued": "2021-06-11T16:10:31.548647",
+                    "modified": "2021-06-11T16:10:31.493121",
+                    "license": "cc-by",
+                    "accessURL": "http://localhost:5000//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980",
+                    "field": [],
+                    "downloadURL": "http://localhost:5000/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980/download/pae_etapa_2_2021-03-31.csv",
+                    "fileName": "pae_etapa_2_2021-03-31.csv"
                 }
             ],
-            "keyword": [
-                "inclusion social",
-                "potenciar trabajo",
-                "salario social"
-            ],
+            "keyword": [],
             "superTheme": [
                 "ECON",
-                "EDUC",
-                "GOVE",
-                "SOCI"
+                "ENVI",
+                "INTR"
             ],
-            "accrualPeriodicity": "eventual",
+            "accrualPeriodicity": "R/P10Y",
             "language": [
                 "spa"
             ]

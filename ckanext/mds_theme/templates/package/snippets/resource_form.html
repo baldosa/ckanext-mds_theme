@@ -60,6 +60,61 @@
     {% endif %}
   {% endblock %}
 
+  {{ form.input('file_fields_dict', label=_('Campos JSON'), id='field-file_fields_dict', placeholder=_('[{campos: del archivo}]'), value=data.file_fields_dict, error=errors.file_fields_dict, classes=['control-medium']) }}
+
+  {#
+  <div id="resource-attributes-form">
+    {% set attributes = h.json_loads(data['file_fields_dict'] or '[]') %}
+
+    <div class="">
+    {% for attribute_group in attributes %}
+      <div>
+          <div class="form-group control-medium" id="{{index}}">
+              <h6>Columna</h6>
+              
+              <div class="col-xs-6">
+                  <label class="control-label">Título de la columna</label>
+                      <input class="form-control" type="text" title="Título de la columna"
+                              placeholder="Ej: audiencia_fecha" value="{{ attribute_group['title'] }}">
+              </div>
+
+              <div class="col-xs-6">
+                  <label class="control-label">Tipo de dato</label>
+                  <div class="controls">
+                      <select class="form-control">
+                          {% set selected_type = attribute_group['type'] %}
+                          <option {{ 'selected=true' if not selected_type or selected_type|length == 0 }}
+                                  disabled="disabled" value="">Ej.: date
+                          </option>
+                          {% for field_type in h.field_types() %}
+                              <option value="{{ field_type[0] }}" {{ 'selected=true' if field_type[0] == selected_type }}
+                              >{{ field_type[1] }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+
+              <div class="col-xs-12">
+                  <label class="control-label">Descripción de la columna</label>
+                  <textarea title="Descripción de la columna" class="form-control"
+                              placeholder="Ej: Fecha en la que se hizo una audiencia pública."
+                  rows="3" maxlength="200">{{ attribute_group.description }}</textarea>
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+    </div>
+
+    
+    
+  </div>
+  <div class="">
+    <span id="add-col" class="btn btn-blue">AGREGAR OTRA COLUMNA</span>
+  </div>
+
+  <input id="attributes-description" type="hidden"
+         name="attributesDescription" value="{{ data['attributesDescription'] }}">
+  #}
   <div class="form-actions">
     {% block delete_button %}
       {% if data.id %}
@@ -87,3 +142,45 @@
     {% endif %}
   </div>
 </form>
+{#
+{% block footer %}
+<script>
+var emptyField = `
+          <div class="form-group control-medium" id="{{index}}">
+              <h6>Columna</h6>
+
+              <div class="col-xs-6">
+                  <label class="control-label">Título de la columna</label>
+                      <input class="form-control" type="text" title="Título de la columna"
+                              placeholder="Ej: audiencia_fecha" value="">
+              </div>
+
+              <div class="col-xs-6">
+                  <label class="control-label">Tipo de dato</label>
+                  <div class="controls">
+                      <select class="form-control">
+                          {% for field_type in h.field_types() %}
+                              <option value="{{ field_type[0] }}" {{ 'selected=true' if field_type[0] == selected_type }}
+                              >{{ field_type[1] }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+
+              <div class="col-xs-12">
+                  <label class="control-label">Descripción de la columna</label>
+                  <textarea title="Descripción de la columna" class="form-control"
+                              placeholder="Ej: Fecha en la que se hizo una audiencia pública."
+                  rows="3" maxlength="200"></textarea>
+              </div>
+          </div>`
+jQuery.fn.greenify = function () {
+  $('#add-col').on('click', function () {
+    const oldCol = $('#resource-attributes-form');
+    oldCol.append(emptyField)
+  });
+};
+
+</script>
+{% endblock %}
+#}

@@ -1,27 +1,37 @@
 {% import 'macros/form.html' as form %}
 
 {% block package_basic_fields_title %}
-{{ form.input('title', id='field-title', label=_('Title'), placeholder=_('eg. A descriptive title'), value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target', 'class': 'form-control'}) }}
+{{ form.input('title', id='field-title', label=_('Title'), placeholder=_('eg. A descriptive title'), value=data.title,
+error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target', 'class':
+'form-control'}) }}
 {% endblock %}
 
 {% block package_basic_fields_url %}
-{% set prefix = h.url_for('dataset.read', id='') %}
-{% set domain = h.url_for('dataset.read', id='', qualified=true) %}
+{% set prefix = h.url_for(controller='dataset', action='read', id='') %}
+{% set domain = h.url_for(controller='dataset', action='read', id='', qualified=true) %}
 {% set domain = domain|replace("http://", "")|replace("https://", "") %}
-{% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>', 'class': 'form-control input-sm'} %}
 
-  {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
-  {% endblock %}
+  {% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>
+    ', 'class': 'form-control input-sm'} %}
+
+
+{{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
+{% endblock %}
+
+
 
   {% block package_basic_fields_custom %}{% endblock %}
 
   {% block package_basic_fields_description %}
-  {{ form.markdown('notes', id='field-notes', label=_('Description'), placeholder=_('eg. Some useful notes about the data'), value=data.notes, error=errors.notes) }}
+  {{ form.markdown('notes', id='field-notes', label=_('Description'), placeholder=_('eg. Some useful notes about the
+  data'), value=data.notes, error=errors.notes) }}
   {% endblock %}
 
   {% block package_basic_fields_tags %}
-  {% set tag_attrs = {'data-module': 'autocomplete', 'data-module-tags': '', 'data-module-source': '/api/2/util/tag/autocomplete?incomplete=?'} %}
-  {{ form.input('tag_string', id='field-tags', label=_('Tags'), placeholder=_('eg. economy, mental health, government'), value=data.tag_string, error=errors.tags, classes=['control-full'], attrs=tag_attrs) }}
+  {% set tag_attrs = {'data-module': 'autocomplete', 'data-module-tags': '', 'data-module-source':
+  '/api/2/util/tag/autocomplete?incomplete=?'} %}
+  {{ form.input('tag_string', id='field-tags', label=_('Tags'), placeholder=_('eg. economy, mental health, government'),
+  value=data.tag_string, error=errors.tags, classes=['control-full'], attrs=tag_attrs) }}
   {% endblock %}
 
   {% block package_basic_fields_license %}
@@ -36,7 +46,8 @@
             {% set empty_license = _('Please select the license') %}
             <option value="">{{ empty_license }}</option>
             {% for license_id, license_desc in h.license_options(existing_license_id) %}
-            <option value="{{ license_id }}" {% if existing_license_id == license_id %}selected="selected"{% endif %}>{{ license_desc }}</option>
+            <option value="{{ license_id }}" {% if existing_license_id==license_id %}selected="selected" {% endif %}>{{
+              license_desc }}</option>
             {% endfor %}
           </select>
           {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
@@ -61,13 +72,14 @@
   <input type="hidden" name="groups__0__id" value="{{ data.group_id }}" />
   {% endif %}
 
-  {% set dataset_is_draft = data.get('state', 'draft').startswith('draft') or data.get('state', 'none') ==  'none' %}
+  {% set dataset_is_draft = data.get('state', 'draft').startswith('draft') or data.get('state', 'none') == 'none' %}
   {% set dataset_has_organization = data.owner_org or data.group_id %}
   {% set organizations_available = h.organizations_available('create_dataset') %}
   {% set user_can_update_owner_org = h.can_update_owner_org(data, organizations_available) %}
   {% set user_is_sysadmin = h.check_access('sysadmin') %}
   {% set show_organizations_selector = organizations_available and user_can_update_owner_org %}
-  {% set show_visibility_selector = dataset_has_organization or (organizations_available and (user_is_sysadmin or dataset_is_draft)) %}
+  {% set show_visibility_selector = dataset_has_organization or (organizations_available and (user_is_sysadmin or
+  dataset_is_draft)) %}
 
   {% if show_organizations_selector and show_visibility_selector %}
   <div data-module="dataset-visibility">
@@ -80,12 +92,15 @@
       <div class="controls">
         <select id="field-organizations" name="owner_org" data-module="autocomplete">
           {% if h.check_config_permission('create_unowned_dataset') %}
-          <option value="" {% if not selected_org and data.id %} selected="selected" {% endif %}>{{ _('No organization') }}</option>
+          <option value="" {% if not selected_org and data.id %} selected="selected" {% endif %}>{{ _('No organization')
+            }}</option>
           {% endif %}
           {% for organization in organizations_available %}
           {# get out first org from users list only if there is not an existing org #}
-          {% set selected_org = (existing_org and existing_org == organization.id) or (not existing_org and not data.id and organization.id == organizations_available[0].id) %}
-          <option value="{{ organization.id }}" {% if selected_org %} selected="selected" {% endif %}>{{ organization.display_name }}</option>
+          {% set selected_org = (existing_org and existing_org == organization.id) or (not existing_org and not data.id
+          and organization.id == organizations_available[0].id) %}
+          <option value="{{ organization.id }}" {% if selected_org %} selected="selected" {% endif %}>{{
+            organization.display_name }}</option>
           {% endfor %}
         </select>
       </div>
@@ -99,7 +114,8 @@
       <div class="controls">
         <select id="field-private" name="private" class="form-control">
           {% for option in [('True', _('Private')), ('False', _('Public'))] %}
-          <option value="{{ option[0] }}" {% if option[0] == data.private|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
+          <option value="{{ option[0] }}" {% if option[0]==data.private|trim %}selected="selected" {% endif %}>{{
+            option[1] }}</option>
           {% endfor %}
         </select>
       </div>
@@ -117,11 +133,85 @@
     <label for="field-state" class="control-label">{{ _('State') }}</label>
     <div class="controls">
       <select class="form-control" id="field-state" name="state">
-        <option value="active" {% if data.get('state', 'none') == 'active' %} selected="selected" {% endif %}>{{ _('Active') }}</option>
-        <option value="deleted" {% if data.get('state', 'none') == 'deleted' %} selected="selected" {% endif %}>{{ _('Deleted') }}</option>
+        <option value="active" {% if data.get('state', 'none' )=='active' %} selected="selected" {% endif %}>{{
+          _('Active') }}</option>
+        <option value="deleted" {% if data.get('state', 'none' )=='deleted' %} selected="selected" {% endif %}>{{
+          _('Deleted') }}</option>
       </select>
     </div>
   </div>
   {% endif %}
+  {# custom fields #}
+  
+  <div class="form-group">
+    {% set superThemeOpts = [
+        {'value': 'AGRI', 'text': 'Agroganadería, pesca y forestación'},
+        {'value': 'ECON', 'text': 'Economía y finanzas'},
+        {'value': 'EDUC', 'text': 'Educación, cultura y deportes'},
+        {'value': 'ENER', 'text': 'Energía'},
+        {'value': 'ENVI', 'text': 'Medio ambiente'},
+        {'value': 'GOVE', 'text': 'Gobierno y sector público'},
+        {'value': 'HEAL', 'text': 'Salud'},
+        {'value': 'INTR', 'text': 'Asuntos internacionales'},
+        {'value': 'JUST', 'text': 'Justicia, seguridad y legales'},
+        {'value': 'REGI', 'text': 'Regiones y ciudades'},
+        {'value': 'SOCI', 'text': 'Población y sociedad'},
+        {'value': 'TECH', 'text': 'Ciencia y tecnología'},
+        {'value': 'TRAN', 'text': 'Transporte'}
+      ]
+    %}
+    <label class="control-label" for="field-super_theme">Super Theme</label>
+    <div class="controls">
+      <div class="row">
+        <div class="col-md-6">
+          <select id="field-super_theme" name="super_theme" data-module="autocomplete" multiple>
+            {% if data.super_theme %}
+            {% set existing_super_theme = data.super_theme %}
+            {% endif %}
+            {% for item in superThemeOpts %}
+            <option value="{{ item['value'] }}" {% if item['value'] in existing_super_theme %}selected="selected" {% endif %}>{{
+              item['text'] }}</option>
+            {% endfor %}
+          </select>
+          {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
+        </div>
+        <div class="col-md-6">
+          <span class="info-block info-inline">
+            <i class="fa fa-info-circle"></i>
+            Definiciones de super theme en <a href="https://datosgobar.github.io/paquete-apertura-datos/perfil-metadatos/#anexo-ii-taxonomia-tematica">el perfil de aplicación nacional de metadatos
+            </a>
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+  {{ form.select('update_frequency', 
+      label=_('Frequencia de actualización'), 
+      id='field-update_frequency',
+      selected=data.update_frequency,
+      error=errors.update_frequency,
+      options=[{'value': 'R/P10Y', 'text': 'Cada diez años'},
+        {'value': 'R/P4Y', 'text': 'Cada cuatro años'},
+        {'value': 'R/P3Y', 'text': 'Cada tres años'},
+        {'value': 'R/P2Y', 'text': 'Cada dos años'},
+        {'value': 'R/P1Y', 'text': 'Anualmente'},
+        {'value': 'R/P6M', 'text': 'Cada medio año'},
+        {'value': 'R/P4M', 'text': 'Cuatrimestralmente'},
+        {'value': 'R/P3M', 'text': 'Trimestralmente'},
+        {'value': 'R/P2M', 'text': 'Bimestralmente'},
+        {'value': 'R/P1M', 'text': 'Mensualmente'},
+        {'value': 'R/P0.5M', 'text': 'Cada 15 días'},
+        {'value': 'R/P0.33M', 'text': 'Tres veces por mes'},
+        {'value': 'R/P1W', 'text': 'Semanalmente'},
+        {'value': 'R/P0.5W', 'text': 'Dos veces a la semana'},
+        {'value': 'R/P0.33W', 'text': 'Tres veces a la semana'},
+        {'value': 'R/P1D', 'text': 'Diariamente'},
+        {'value': 'R/PT1H', 'text': 'Cada hora'},
+        {'value': 'R/PT1S', 'text': 'Continuamente actualizado'},
+        {'value': 'eventual', 'text': 'Eventual'}
+      ],
+      classes=['control-medium']
+    ) }}
 
   {% endblock %}
