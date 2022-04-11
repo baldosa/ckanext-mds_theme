@@ -1,0 +1,7 @@
+
+        [ckan.plugins]
+        mds_theme=ckanext.mds_theme.plugin:MdsThemePlugin
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    

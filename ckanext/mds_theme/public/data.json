@@ -9,7 +9,7 @@
         "name": "Ministerio de Desarrollo Social de la Naci\u00f3n"
     },
     "issued": "",
-    "modified": "2021-06-15T18:17:44Z",
+    "modified": "2022-04-11T12:43:02Z",
     "language": [
         "spa"
     ],
@@ -22,9 +22,245 @@
     "themeTaxonomy": [],
     "dataset": [
         {
+            "title": "Centros de Referencia",
+            "description": "Listado de Centros de Referencia, con direcciones. Los Centros de Referencia (CDR) son espacios locales de gesti\u00f3n que funcionan como delegaciones del Ministerio en municipios y provincias, donde profesionales brindan asesoramiento para facilitar el acceso a distintos programas y servicios, realizan talleres gratuitos de capacitaci\u00f3n e impulsan estrategias de desarrollo local junto a organizaciones sociales.",
+            "modified": "2021-06-30T22:29:41.412174",
+            "identifier": "e67d5edf-cf55-4a5c-b420-b6fe9f61f6b3",
+            "issued": "2021-04-17T10:48:47.626955",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/dondeestamos",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Abordaje Integral"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "2af1d507-7c38-4c8b-b6c3-d3449cc4bc0d",
+                    "format": "CSV",
+                    "title": "Listado de Centros de Referencia",
+                    "description": "Listado de Centros de Referencia del Ministerio de Salud y Desarrollo Social",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T10:49:23.744024",
+                    "modified": "2021-04-17T10:49:23.688658",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/e67d5edf-cf55-4a5c-b420-b6fe9f61f6b3/resource/2af1d507-7c38-4c8b-b6c3-d3449cc4bc0d",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Nombre del Centro de Referencia",
+                            "title": "titulo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Direcci\u00f3n del Centro de Referencia",
+                            "title": "direccion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Provincia d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Localidad d\u00f3nde est\u00e1 ubicado el Centro de Referencia",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Forma de contacto",
+                            "title": "contacto"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/e67d5edf-cf55-4a5c-b420-b6fe9f61f6b3/resource/2af1d507-7c38-4c8b-b6c3-d3449cc4bc0d/download/centros_de_referencia-2021-04-09.csv",
+                    "fileName": "centros_de_referencia-2021-04-09.csv"
+                }
+            ],
+            "keyword": [
+                "poblaciones vulnerables"
+            ],
+            "superTheme": [
+                "REGI",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Compras COVID-19",
+            "description": "Detalle de las compras y contrataciones tramitadas por el Ministerio de Desarrollo Social de la Naci\u00f3n en el marco de la Pandemia por COVID-19.\r\n\r\n",
+            "modified": "2022-01-03T06:20:26.361486",
+            "identifier": "061c8da2-dc88-4774-b55e-5a3e04b00f59",
+            "issued": "2021-06-30T22:27:33.132567",
+            "landingPage": "https://comprar.gob.ar",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Gesti\u00f3n Administrativa"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "c7220c90-6de6-4dab-a5a6-d2cd358c6451",
+                    "format": "CSV",
+                    "title": "Compras COVID-19 2021-12-30",
+                    "description": "Detalle de las compras y contrataciones tramitadasen el marco de la Pandemia por COVID-19 al 2021-12-30\r\n\r\n\r\n",
+                    "type": "file.upload",
+                    "issued": "2021-06-30T22:28:27.690662",
+                    "modified": "2022-01-03T06:20:26.339669",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/061c8da2-dc88-4774-b55e-5a3e04b00f59/resource/c7220c90-6de6-4dab-a5a6-d2cd358c6451",
+                    "field": [
+                        {
+                            "title": "id",
+                            "description": "N\u00famero \u00fanico",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "numero_cotratacion",
+                            "description": "N\u00famero de compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "expediente",
+                            "description": "Expediente por el cual tramita la misma",
+                            "type": "string"
+                        },
+                        {
+                            "title": "proceso_comprar",
+                            "description": "N\u00famero de proceso COMPRAR",
+                            "type": "string"
+                        },
+                        {
+                            "title": "objeto",
+                            "description": "Objeto de la compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "moneda",
+                            "description": "Moneda de la compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "monto_adjudicado",
+                            "description": "Monto total adjudicado",
+                            "type": "number"
+                        },
+                        {
+                            "title": "cantidad_de_invitados",
+                            "description": "Cantidad de invitados",
+                            "type": "string"
+                        },
+                        {
+                            "title": "oferente_razon_social",
+                            "description": "Raz\u00f3n social del oferente",
+                            "type": "string"
+                        },
+                        {
+                            "title": "oferente_cuit",
+                            "description": "CUIT del oferente",
+                            "type": "string"
+                        },
+                        {
+                            "title": "oferente_cantidad_ofrecido",
+                            "description": "Cantidad ofrecida",
+                            "type": "number"
+                        },
+                        {
+                            "title": "oferente_monto_ofrecido",
+                            "description": "Monto total de lo ofrecido",
+                            "type": "number"
+                        },
+                        {
+                            "title": "adjudicataria",
+                            "description": "Si el oferente fue adjudicado o no",
+                            "type": "string"
+                        },
+                        {
+                            "title": "oferente_cantidad_adjudicado",
+                            "description": "Cantidad adjudicada a la oferta",
+                            "type": "number"
+                        },
+                        {
+                            "title": "oferente_cantidad_adjudicado_monto",
+                            "description": "Monto adjudicado a la oferta",
+                            "type": "number"
+                        },
+                        {
+                            "title": "acto_administrativo",
+                            "description": "Acto administrativo que aprob\u00f3 la compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "acto_administrativo_fecha_publicacion_bora",
+                            "description": "Fecha de publicaci\u00f3n del acto administrativo en el Bolet\u00edn Oficial",
+                            "type": "string"
+                        },
+                        {
+                            "title": "acto_administrativo_link",
+                            "description": "Link del acto administrativo publicado en el Bolet\u00edn Oficial",
+                            "type": "string"
+                        },
+                        {
+                            "title": "modificacion_acto_administrativo",
+                            "description": "Acto administrativo que modifica el acto administrativo que aprob\u00f3 la compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "modificacion_acto_administrativo_fecha_publicacion_bora",
+                            "description": "Fecha de publicaci\u00f3n del acto administrativo de modificaci\u00f3n en el Bolet\u00edn Oficial",
+                            "type": "string"
+                        },
+                        {
+                            "title": "modificacion_acto_administrativo_link",
+                            "description": "Link del acto administrativo de modificaci\u00f3n publicado en el Bolet\u00edn Oficial",
+                            "type": "string"
+                        },
+                        {
+                            "title": "estado_actual",
+                            "description": "Estado actual de la compra",
+                            "type": "string"
+                        },
+                        {
+                            "title": "planilla_adjunta_cc_9_onc",
+                            "description": "Planilla adjunta seg\u00fan Comunicaci\u00f3n General n\u00famero 9 y 10 de la Oficina Nacional de Contrataciones",
+                            "type": "string"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/061c8da2-dc88-4774-b55e-5a3e04b00f59/resource/c7220c90-6de6-4dab-a5a6-d2cd358c6451/download/compra-covid-2021-12-30.csv",
+                    "fileName": "compra-covid-2021-12-30.csv"
+                }
+            ],
+            "keyword": [
+                "covid-19"
+            ],
+            "superTheme": [
+                "ECON",
+                "GOVE"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
             "title": "Hacemos Futuro (2018-2020)",
             "description": "Datos correspondientes a los titulares del Programa Hacemos Futuro, creado por RESOL-2018-96-APN-MDS. Este programa unific\u00f3 a los titulares de las dos l\u00edneas del Programa Ingreso Social con Trabajo. Vigente entre febrero 2018 y febrero 2020.",
-            "modified": "2021-06-15T21:16:57.908204",
+            "modified": "2021-11-01T16:50:31.805933",
             "identifier": "2961336b-d95c-4967-a88f-cfda923b21d6",
             "issued": "2021-04-17T15:58:57.662256",
             "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/hf",
@@ -45,16 +281,759 @@
                     "identifier": "4e3eb1e8-7050-4dbe-805c-192d0479839d",
                     "format": "CSV",
                     "title": "Titulares activos por mes y departamento Hacemos Futuro",
-                    "description": "Datos correspondientes a los titulares activos por mes y departamento del Programa Hacemos Futuro.",
+                    "description": "Total de titulares activos por mes, departamento y municipio del Programa Hacemos Futuro.",
                     "type": "file.upload",
                     "issued": "2021-04-17T16:00:02.555914",
-                    "modified": "2021-04-17T16:00:02.505515",
+                    "modified": "2021-11-01T16:50:07.707396",
                     "license": "cc-by",
-                    "accessURL": "http://localhost:5000//dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d",
+                    "field": [
+                        {
+                            "title": "periodo",
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado"
+                        },
+                        {
+                            "title": "provincia",
+                            "type": "string",
+                            "description": "Nombre de la provincia"
+                        },
+                        {
+                            "title": "provincia_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "departamento",
+                            "type": "string",
+                            "description": "Nombre del departamento"
+                        },
+                        {
+                            "title": "departamento_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento seg\u00fan la BAHRA"
+                        },
+                        {
+                            "title": "municipio",
+                            "type": "string",
+                            "description": "Nombre del gobierno local/municipio"
+                        },
+                        {
+                            "title": "municipio_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de entidad seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "titulares",
+                            "type": "integer",
+                            "description": "Titulares que recibieron el Salario Social Complementario. No puede calcularse el total de titulares \u00fanicos sumando la columna"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d/download/hacemos-futuro-titulares-activos-2020-02-01.csv",
+                    "fileName": "hacemos-futuro-titulares-activos-2020-02-01.csv"
+                },
+                {
+                    "identifier": "e84a6964-4d4e-49cd-bbfd-7b15719d03a8",
+                    "format": "CSV",
+                    "title": "Titulares \u00fanicos por a\u00f1o y departamento Hacemos Futuro",
+                    "description": "Titulares \u00fanicos por a\u00f1o y departamento Hacemos Futuro",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:21:38.666756",
+                    "modified": "2021-11-01T16:50:17.510028",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/e84a6964-4d4e-49cd-bbfd-7b15719d03a8",
+                    "field": [
+                        {
+                            "title": "periodo",
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado"
+                        },
+                        {
+                            "title": "provincia",
+                            "type": "string",
+                            "description": "Nombre de la provincia"
+                        },
+                        {
+                            "title": "provincia_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "departamento",
+                            "type": "string",
+                            "description": "Nombre del departamento"
+                        },
+                        {
+                            "title": "departamento_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento seg\u00fan la BAHRA"
+                        },
+                        {
+                            "title": "municipio",
+                            "type": "string",
+                            "description": "Nombre del gobierno local/municipio"
+                        },
+                        {
+                            "title": "municipio_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de entidad seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "titulares",
+                            "type": "integer",
+                            "description": "Titulares que recibieron el Salario Social Complementario. No puede calcularse el total de titulares \u00fanicos sumando la columna"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/e84a6964-4d4e-49cd-bbfd-7b15719d03a8/download/hacemos-futuro-titulares-2020-02-01.csv",
+                    "fileName": "hacemos-futuro-titulares-2020-02-01.csv"
+                },
+                {
+                    "identifier": "7610e02a-535d-4f34-a1bc-58ab220e5253",
+                    "format": "CSV",
+                    "title": "Titulares \u00fanicos por departamento Hacemos Futuro",
+                    "description": "Total de titulares que pertenecieron al programa",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:22:10.277408",
+                    "modified": "2021-11-01T16:50:27.240509",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/7610e02a-535d-4f34-a1bc-58ab220e5253",
+                    "field": [
+                        {
+                            "title": "periodo",
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado"
+                        },
+                        {
+                            "title": "provincia",
+                            "type": "string",
+                            "description": "Nombre de la provincia"
+                        },
+                        {
+                            "title": "provincia_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "departamento",
+                            "type": "string",
+                            "description": "Nombre del departamento"
+                        },
+                        {
+                            "title": "departamento_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento seg\u00fan la BAHRA"
+                        },
+                        {
+                            "title": "municipio",
+                            "type": "string",
+                            "description": "Nombre del gobierno local/municipio"
+                        },
+                        {
+                            "title": "municipio_id",
+                            "type": "string",
+                            "description": "C\u00f3digo de entidad seg\u00fan BAHRA"
+                        },
+                        {
+                            "title": "titulares",
+                            "type": "integer",
+                            "description": "Titulares que recibieron el Salario Social Complementario. No puede calcularse el total de titulares \u00fanicos sumando la columna"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/7610e02a-535d-4f34-a1bc-58ab220e5253/download/hacemos-futuro-total-titulares-2020-02-01.csv",
+                    "fileName": "hacemos-futuro-total-titulares-2020-02-01.csv"
+                }
+            ],
+            "keyword": [
+                "hacemos futuro",
+                "hf",
+                "inclusion laboral",
+                "inclusion social"
+            ],
+            "superTheme": [
+                "EDUC",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Listado de participantes de los Sorteos Mi Pieza",
+            "description": "N\u00f3mina de las mujeres participantes de la L\u00ednea Mi Pieza del Fondo de Integraci\u00f3n Socio Urbana (FISU)",
+            "modified": "2022-03-09T08:52:33.394562",
+            "identifier": "abdbf19f-e388-4393-933f-316216611e8c",
+            "issued": "2021-10-16T10:09:37.311216",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/mipieza",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social, Secretar\u00eda de Integraci\u00f3n Socio Urbana"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "bb4d6278-b696-4dc5-a5e5-4c5bd08f5301",
+                    "format": "CSV",
+                    "title": "Listado de participantes de los Sorteos Mi Pieza",
+                    "description": "Listado de participantes y seleccionadas de los sorteos Mi Pieza con datos del formulario de inscripci\u00f3n.",
+                    "type": "file.upload",
+                    "issued": "2021-10-16T10:15:03.970829",
+                    "modified": "2022-03-09T08:52:33.364424",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/abdbf19f-e388-4393-933f-316216611e8c/resource/bb4d6278-b696-4dc5-a5e5-4c5bd08f5301",
+                    "field": [
+                        {
+                            "title": "id",
+                            "description": "N\u00famero de orden de inscripci\u00f3n",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "provincia_id",
+                            "description": "ID de Provincia de Argentina seg\u00fan BAHRA",
+                            "type": "string"
+                        },
+                        {
+                            "title": "provincia",
+                            "description": "Provincia de Argentina",
+                            "type": "string"
+                        },
+                        {
+                            "title": "departamento_id",
+                            "description": "ID de departamento de Argentina seg\u00fan BAHRA",
+                            "type": "string"
+                        },
+                        {
+                            "title": "departamento",
+                            "description": "Nombre del departamento",
+                            "type": "string"
+                        },
+                        {
+                            "title": "barrio_id",
+                            "description": "ID del Barrio seg\u00fan el Registro Nacional de Barrios Populares",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "cantidad_grupo_familiar",
+                            "description": "Integrantes del grupo familiar incluyendo a la destinataria",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "cantidad_menores_18",
+                            "description": "Cantidad de miembros menores de 18 a\u00f1os",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "presenta_discapacidad",
+                            "description": "Si la destinataria presenta discapacidad",
+                            "type": "string"
+                        },
+                        {
+                            "title": "miembro_discapacidad",
+                            "description": "Si alg\u00fan miembro del grupo familiar presenta discapacidad",
+                            "type": "string"
+                        },
+                        {
+                            "title": "validacion_discapacidad",
+                            "description": "Discapacidad validada por organismo competente",
+                            "type": "string"
+                        },
+                        {
+                            "title": "ambientes_vivienda",
+                            "description": "Cantidad de ambientes de la vivienda (sin contar ba\u00f1o, pasillo, cocina)",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "ambientes_dormir",
+                            "description": "Cantidad de ambientes exclusivos para dormir",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "piso_vivienda",
+                            "description": "Material principal del piso",
+                            "type": "string"
+                        },
+                        {
+                            "title": "pared_vivienda",
+                            "description": "Material principal de las paredes",
+                            "type": "string"
+                        },
+                        {
+                            "title": "techo_vivienda",
+                            "description": "Material principal del techo",
+                            "type": "string"
+                        },
+                        {
+                            "title": "tipo_obra",
+                            "description": "Tipo de obra que se desea realizar",
+                            "type": "string"
+                        },
+                        {
+                            "title": "monto",
+                            "description": "El monto asignado seg\u00fan el tipo de obra elegida",
+                            "type": "integer"
+                        },
+                        {
+                            "title": "seleccionada",
+                            "description": "Si la participante fue seleccionada o no.",
+                            "type": "integer"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/abdbf19f-e388-4393-933f-316216611e8c/resource/bb4d6278-b696-4dc5-a5e5-4c5bd08f5301/download/mi-pieza-2022-02-28.csv",
+                    "fileName": "mi-pieza-2022-02-28.csv"
+                }
+            ],
+            "keyword": [
+                "fisu",
+                "integracion socio urbana",
+                "mi pieza",
+                "renabap",
+                "sisu"
+            ],
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Microcr\u00e9ditos otorgados",
+            "description": "Cantidad de microcr\u00e9ditos y capital otorgado por organizaciones administradoras inscriptas en el Registro Nacional de Instituciones de Microcr\u00e9dito, agrupados por mes de otorgamiento, provincia, departamento y localidad.",
+            "modified": "2022-01-04T11:29:34.902339",
+            "identifier": "70583b90-d36c-4f9e-accf-4272e557ac8f",
+            "issued": "2021-04-17T14:29:49.143440",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/conami",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social, Comisi\u00f3n Nacional de Microcr\u00e9dito"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "cea60c83-1ff5-4e07-bf94-bd4926000815",
+                    "format": "CSV",
+                    "title": "Microcr\u00e9ditos otorgados",
+                    "description": "Cantidad de microcr\u00e9ditos y capital otorgado por organizaciones administradoras, agrupados por mes de otorgamiento, provincia, departamento y localidad hasta el periodo 2021-12-31",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T14:30:53.050137",
+                    "modified": "2022-01-04T11:29:34.870340",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/70583b90-d36c-4f9e-accf-4272e557ac8f/resource/cea60c83-1ff5-4e07-bf94-bd4926000815",
                     "field": [
                         {
                             "type": "date",
-                            "description": "Periodo de tiempo analizado. La l\u00ednea program\u00e1tica estuvo vigente entre mayo 2013 y enero 2018",
+                            "description": "Periodo de tiempo analizado ",
+                            "title": "indice_tiempo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
+                            "title": "provincia_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina",
+                            "title": "departamento_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de localidad codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina",
+                            "title": "localidad_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Microcr\u00e9ditos otorgados",
+                            "title": "microcreditos"
+                        },
+                        {
+                            "type": "number",
+                            "description": "Capital otorgado por el total de cr\u00e9ditos",
+                            "title": "monto_microcreditos"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/70583b90-d36c-4f9e-accf-4272e557ac8f/resource/cea60c83-1ff5-4e07-bf94-bd4926000815/download/microcreditos-2021-12-31.csv",
+                    "fileName": "microcreditos-2021-12-31.csv"
+                }
+            ],
+            "keyword": [
+                "conami",
+                "economia social",
+                "inclusion laboral",
+                "inclusion social",
+                "microcreditos"
+            ],
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Monotributo Social",
+            "description": "Titulares inscriptos en el Registro Nacional de Desarrollo Local y Econom\u00eda Social por periodo y provincia.\r\n",
+            "modified": "2022-01-04T08:47:48.887896",
+            "identifier": "e0691629-1af3-4cdd-bb83-b91d3926a372",
+            "issued": "2021-07-05T12:36:22.594363",
+            "landingPage": "https://www.argentina.gob.ar/servicio/adherir-al-monotributo-social",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social. "
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica ",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "1a3de2ed-0e30-4d47-adf3-2ff462a892b5",
+                    "format": "CSV",
+                    "title": "Efectores Activos al 2020-12-31",
+                    "description": "Efectores Activos al 2020-12-31 desde 2004 al 2020-12-31 por mes y provincia.",
+                    "type": "file.upload",
+                    "issued": "2021-07-05T12:39:57.730361",
+                    "modified": "2022-01-04T08:40:13.910658",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/e0691629-1af3-4cdd-bb83-b91d3926a372/resource/1a3de2ed-0e30-4d47-adf3-2ff462a892b5",
+                    "field": [
+                        {
+                            "type": "string",
+                            "title": "periodo",
+                            "description": "Mes analizado"
+                        },
+                        {
+                            "type": "string",
+                            "title": "provincia_id",
+                            "description": "C\u00f3digo de provincia seg\u00fan el BAHRA"
+                        },
+                        {
+                            "type": "string",
+                            "title": "provincia",
+                            "description": "Nombre de la provincia"
+                        },
+                        {
+                            "type": "integer",
+                            "title": "efectores_activos",
+                            "description": "Titulares inscriptos en el Registro"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/e0691629-1af3-4cdd-bb83-b91d3926a372/resource/1a3de2ed-0e30-4d47-adf3-2ff462a892b5/download/monotributo-social-efectores-activos-2021-12-01.csv",
+                    "fileName": "monotributo-social-efectores-activos-2021-12-01.csv"
+                },
+                {
+                    "identifier": "bd20597f-1d12-408e-806b-460c70f38746",
+                    "format": "CSV",
+                    "title": "Efectores activos con cobertura de obra social",
+                    "description": "Efectores Activos con cobertura de obra social y monto subsidado por el Ministerio de Desarrollo Social al 2020-11-30 desde 2012-02-01 al 2021-11-30 por mes y provincia.\r\n\r\n",
+                    "type": "file.upload",
+                    "issued": "2021-07-06T19:20:13.064991",
+                    "modified": "2022-01-04T08:47:48.860274",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/e0691629-1af3-4cdd-bb83-b91d3926a372/resource/bd20597f-1d12-408e-806b-460c70f38746",
+                    "field": [
+                        {
+                            "type": "string",
+                            "title": "periodo",
+                            "description": "Mes analizado"
+                        },
+                        {
+                            "type": "string",
+                            "title": "provincia_id",
+                            "description": "C\u00f3digo de provincia seg\u00fan el BAHRA"
+                        },
+                        {
+                            "type": "string",
+                            "title": "provincia",
+                            "description": "Nombre de la provincia"
+                        },
+                        {
+                            "type": "integer",
+                            "title": "efectores_pagos",
+                            "description": "Titulares inscriptos en el Registro con cobertura de Obra Social"
+                        },
+                        {
+                            "type": "integer",
+                            "title": "monto_ms",
+                            "description": "Monto subsidiado por el Ministerio de Desarrollo Social de la Naci\u00f3n"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/e0691629-1af3-4cdd-bb83-b91d3926a372/resource/bd20597f-1d12-408e-806b-460c70f38746/download/monotributo-social-efectores-pagos-2021-11-01.csv",
+                    "fileName": "monotributo-social-efectores-pagos-2021-11-01.csv"
+                }
+            ],
+            "keyword": [
+                "inclusion laboral",
+                "inclusion social",
+                "monotributo social"
+            ],
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Montos de Programa de Transferencia Condicionada",
+            "description": "Montos hist\u00f3ricos de programas de transferencia condicionada del Ministerio de Desarrollo Social por periodo, programa y tipo",
+            "modified": "2022-01-04T12:19:26.128672",
+            "identifier": "2fbfb3e2-cd0a-4d1b-ac3b-89326e8e4f9c",
+            "issued": "2021-04-17T16:21:12.398588",
+            "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/montos-de-programa-de-transferencia-condicionada",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social."
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica ",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "6778396e-75f7-4fce-ac65-97d1e5e4525e",
+                    "format": "CSV",
+                    "title": "Montos vigentes",
+                    "description": "Monto vigente de la prestaci\u00f3n por mes.",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T16:23:55.396765",
+                    "modified": "2022-01-04T12:19:26.114745",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/2fbfb3e2-cd0a-4d1b-ac3b-89326e8e4f9c/resource/6778396e-75f7-4fce-ac65-97d1e5e4525e",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Monto del  concepto",
+                            "title": "monto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "L\u00ednea program\u00e1tica, Argentina Trabaja, Ellas Hacen, Hacemos Futuro, Proyectos Productivos Comunitarios o Potenciar Trabajo",
+                            "title": "programa"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "ID de la l\u00ednea program\u00e1tica",
+                            "title": "id_programa"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Si el monto corresponde al subsidio o al incentivo por producci\u00f3n",
+                            "title": "concepto"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/2fbfb3e2-cd0a-4d1b-ac3b-89326e8e4f9c/resource/6778396e-75f7-4fce-ac65-97d1e5e4525e/download/montos-transferencias-2021-12-01.csv",
+                    "fileName": "montos-transferencias-2021-12-01.csv"
+                }
+            ],
+            "keyword": [
+                "at",
+                "hf",
+                "inclusion laboral",
+                "inclusion social",
+                "potenciar trabajo",
+                "ppc"
+            ],
+            "superTheme": [
+                "GOVE",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales",
+            "description": "Datos de titulares del Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) - Ley 27.634.\r\n",
+            "modified": "2022-04-07T10:58:55.849107",
+            "identifier": "d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c",
+            "issued": "2021-06-11T16:09:08.673168",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/ninezyadolescencia/pae",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda Nacional de ni\u00f1ez, adolescencia y familia"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "05482f0d-8368-44c6-a06d-18c4312d0141",
+                    "format": "CSV",
+                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales - Etapa 1",
+                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa uno.",
+                    "type": "file.upload",
+                    "issued": "2021-06-11T16:10:08.908317",
+                    "modified": "2022-02-23T08:01:22.764589",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "provincia_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de destinatarios",
+                            "title": "destinatarios"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141/download/pae_2021-12-31.csv",
+                    "fileName": "pae_2021-12-31.csv"
+                },
+                {
+                    "identifier": "ba9ecf55-8760-42d5-9c85-b0e070871980",
+                    "format": "CSV",
+                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales - Etapa 2",
+                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa dos.",
+                    "type": "file.upload",
+                    "issued": "2021-06-11T16:10:31.548647",
+                    "modified": "2022-04-07T10:58:55.833907",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "provincia_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de destinatarios",
+                            "title": "destinatarios"
+                        },
+                        {
+                            "type": "float",
+                            "description": "Monto transferido",
+                            "title": "monto"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980/download/pae_etapa_2_2021-12-31.csv",
+                    "fileName": "pae_etapa_2_2021-12-31.csv"
+                }
+            ],
+            "keyword": [
+                "adolescencia",
+                "ni\u00f1ez",
+                "pae",
+                "politicas de cuidado",
+                "sennaf"
+            ],
+            "superTheme": [
+                "GOVE",
+                "HEAL",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Proyectos Productivos Comunitarios (2017-2020)",
+            "description": "Datos correspondientes a los titulares del Programa Proyectos Productivos Comunitarios, creado por RESFC-2017-1-APN-MDS. Vigente entre abril 2017 y febrero 2020.",
+            "modified": "2021-07-07T16:20:31.632774",
+            "identifier": "8da5d759-6a36-4f49-9045-d4905993c2ef",
+            "issued": "2021-04-17T15:55:49.498297",
+            "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/ppc",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social."
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "17357c69-f608-4d66-9a50-410530ca988d",
+                    "format": "CSV",
+                    "title": "Titulares activos por mes Proyectos Productivos Comunitarios",
+                    "description": "Datos correspondientes a los titulares activos por mes y departamento del Programa Proyectos Productivos Comunitarios",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T15:56:21.811696",
+                    "modified": "2021-04-17T15:56:21.725517",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/17357c69-f608-4d66-9a50-410530ca988d",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado.",
                             "title": "periodo"
                         },
                         {
@@ -79,31 +1058,924 @@
                         },
                         {
                             "type": "integer",
-                            "description": "Titulares que recibieron el subsidio. No puede calcularse el total de titulares \u00f1nicos sumando la columna  ",
+                            "description": "Titulares que recibieron el subsidio",
                             "title": "titulares_activos"
                         }
                     ],
-                    "downloadURL": "http://localhost:5000/dataset/2961336b-d95c-4967-a88f-cfda923b21d6/resource/4e3eb1e8-7050-4dbe-805c-192d0479839d/download/hacemos-futuro-titulares-activos-2020-02-29.csv",
-                    "fileName": "hacemos-futuro-titulares-activos-2020-02-29.csv"
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/17357c69-f608-4d66-9a50-410530ca988d/download/proyectos-productivos-comunitarios-titulares-activos-2020-02-29.csv",
+                    "fileName": "proyectos-productivos-comunitarios-titulares-activos-2020-02-29.csv"
+                },
+                {
+                    "identifier": "ccd782ef-51c3-4ecd-af36-127cfa170014",
+                    "format": "CSV",
+                    "title": "Titulares por a\u00f1o - Proyectos Productivos Comunitarios",
+                    "description": "Datos correspondientes a los titulares por a\u00f1o y departamento del Programa Proyectos Productivos Comunitarios",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:20:03.485931",
+                    "modified": "2021-07-07T16:20:03.444775",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/ccd782ef-51c3-4ecd-af36-127cfa170014",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado. ",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "",
+                            "description": "Total de titulares por a\u00f1o y departamento ",
+                            "title": "titulares_activos"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/ccd782ef-51c3-4ecd-af36-127cfa170014/download/proyectos-productivos-comunitarios-titulares-2020-02-29.csv",
+                    "fileName": "proyectos-productivos-comunitarios-titulares-2020-02-29.csv"
+                },
+                {
+                    "identifier": "810142e8-d589-43a5-814e-d99bb4f9eece",
+                    "format": "CSV",
+                    "title": "Total de titulares Proyectos Productivos Comunitarios",
+                    "description": "Total de titulares que pertenecieron al Programa Proyectos Productivos Comunitarios",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:20:31.668820",
+                    "modified": "2021-07-07T16:20:31.610606",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/810142e8-d589-43a5-814e-d99bb4f9eece",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Total de titulares por departamento  ",
+                            "title": "titulares"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/8da5d759-6a36-4f49-9045-d4905993c2ef/resource/810142e8-d589-43a5-814e-d99bb4f9eece/download/proyectos-productivos-comunitarios-total-titulares-2020-02-29.csv",
+                    "fileName": "proyectos-productivos-comunitarios-total-titulares-2020-02-29.csv"
                 }
             ],
-            "keyword": [],
-            "superTheme": [
-                "EDUC",
-                "GOVE"
+            "keyword": [
+                "inclusion laboral",
+                "inclusion social",
+                "ppc",
+                "salario social"
             ],
-            "accrualPeriodicity": "R/P4M",
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
             "language": [
                 "spa"
             ]
         },
         {
-            "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales",
-            "description": "Datos de titulares del Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) - Ley 27.634.\r\n",
-            "modified": "2021-06-14T17:33:28.728971",
-            "identifier": "d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c",
-            "issued": "2021-06-11T16:09:08.673168",
-            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/ninezyadolescencia/pae",
+            "title": "Programa Ingreso Social con Trabajo (2009-2018)",
+            "description": "Datos correspondientes a los titulares del Programa Ingreso Social con Trabaja -Argentina Trabaja-, creado por Resoluci\u00f3n 3182/2009 del Ministerio de Desarrollo Social, y de la l\u00ednea program\u00e1tica Ellas Hacen, creada por  Resoluci\u00f3n SCyMI Nro. 2176/13.",
+            "modified": "2021-07-07T16:12:24.507670",
+            "identifier": "10df5dbf-061a-4ff5-a4f7-63678f0dd8e8",
+            "issued": "2021-04-17T14:44:44.488451",
+            "landingPage": "https://datosabiertos.desarrollosocial.gob.ar/dataset/prist",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Econom\u00eda Social."
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "776d890c-42d5-4bfd-9a01-93456b2b9e37",
+                    "format": "CSV",
+                    "title": "Titulares activos por mes Programa Ingreso Social con Trabaja - Argentina Trabaja (PRIST)",
+                    "description": "Titulares activos por mes del PRIST. Los datos geogr\u00e1ficos responden al domicilio del titular al recibir su \u00f1ltimo subsidio. No incluyen los titulares de la l\u00ednea Ellas Hacen",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T14:45:32.184870",
+                    "modified": "2021-04-17T14:47:08.060851",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/776d890c-42d5-4bfd-9a01-93456b2b9e37",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado. La l\u00ednea program\u00e1tica estuvo vigente entre mayo 2013 y enero 2018",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia\n",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00f1n la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina\n",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento\n",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Titulares que recibieron el subsidio. No puede calcularse el total de titulares \u00fanicos sumando la columna",
+                            "title": "titulares_activos"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Titulares que adem\u00e1s de recibir el subsidio, recibieron incentivo por producci\u00f3n.",
+                            "title": "presentismo"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/776d890c-42d5-4bfd-9a01-93456b2b9e37/download/argentina-trabaja-titulares-activos-2018-01-31.csv",
+                    "fileName": "argentina-trabaja-titulares-activos-2018-01-31.csv"
+                },
+                {
+                    "identifier": "19c29463-85c7-4c17-95d1-9c322b42d308",
+                    "format": "CSV",
+                    "title": "Titulares activos por mes Ellas Hacen",
+                    "description": "Titulares activos por mes de la l\u00ednea program\u00e1tica Ellas Hacen del Programa Ingreso Social con Trabajo. Los datos geogr\u00e1ficos responden al domicilio del titular al recibir su \u00f1ltimo subsidio.",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T14:46:29.670712",
+                    "modified": "2021-04-17T14:46:29.588863",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/19c29463-85c7-4c17-95d1-9c322b42d308",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado. La l\u00ednea program\u00e1tica estuvo vigente entre mayo 2013 y enero 2018",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  \n",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia\n",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00f1n la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina\n",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento\n",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Titulares que recibieron el subsidio. No puede calcularse el total de titulares \u00fanicos sumando la columna",
+                            "title": "titulares_activos"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Titulares que adem\u00e1s de recibir el subsidio, recibieron incentivo por producci\u00f3n.",
+                            "title": "presentismo"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/19c29463-85c7-4c17-95d1-9c322b42d308/download/ellas-hacen-titulares-activos-2018-01-31.csv",
+                    "fileName": "ellas-hacen-titulares-activos-2018-01-31.csv"
+                },
+                {
+                    "identifier": "b0d85d75-4f4b-4489-9e90-37e036309c04",
+                    "format": "CSV",
+                    "title": "Titulares por a\u00f1o - Ellas Hacen",
+                    "description": "Titulares activos por a\u00f1o y departamento de la l\u00ednea program\u00e1tica Ellas Hacen. Los datos geogr\u00e1ficos responden al domicilio del titular al recibir su \u00faltimo subsidio.",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:07:23.779831",
+                    "modified": "2021-07-07T16:07:23.675991",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/b0d85d75-4f4b-4489-9e90-37e036309c04",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado. ",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Total de titulares de la l\u00ednea program\u00e1tica por a\u00f1o y departamento ",
+                            "title": "titulares"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/b0d85d75-4f4b-4489-9e90-37e036309c04/download/ellas-hacen-titulares-2018-01-31.csv",
+                    "fileName": "ellas-hacen-titulares-2018-01-31.csv"
+                },
+                {
+                    "identifier": "36721677-6803-4fcf-8578-53be62d9e592",
+                    "format": "CSV",
+                    "title": "Titulares por a\u00f1o - Programa Ingreso Social con Trabajo",
+                    "description": "Titulares activos por a\u00f1o y departamento del Programa Ingreso Social con Trabajo. Los datos geogr\u00e1ficos responden al domicilio del titular al recibir su \u00f1ltimo subsidio.",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:08:15.823150",
+                    "modified": "2021-07-07T16:08:15.760763",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/36721677-6803-4fcf-8578-53be62d9e592",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado.",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "",
+                            "description": "Total de titulares de la l\u00ednea program\u00e1tica por a\u00f1o y departamento",
+                            "title": "titulares"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/36721677-6803-4fcf-8578-53be62d9e592/download/argentina-trabaja-titulares-2018-01-31.csv",
+                    "fileName": "argentina-trabaja-titulares-2018-01-31.csv"
+                },
+                {
+                    "identifier": "74e10153-f828-40bf-82bb-8bb6c9a5fc97",
+                    "format": "CSV",
+                    "title": "Total de titulares PRIST",
+                    "description": "Total de titulares que pertenecieron a las dos l\u00edneas del Programa Ingreso Social con Trabajo",
+                    "type": "file.upload",
+                    "issued": "2021-07-07T16:12:24.568820",
+                    "modified": "2021-07-07T16:12:24.471302",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/74e10153-f828-40bf-82bb-8bb6c9a5fc97",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "L\u00ednea program\u00e1tica",
+                            "title": "linea"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Total de titulares de la l\u00ednea program\u00e1tica por departamento ",
+                            "title": "titulares"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/10df5dbf-061a-4ff5-a4f7-63678f0dd8e8/resource/74e10153-f828-40bf-82bb-8bb6c9a5fc97/download/argentina-trabaja-total-titulares-2018-01-31.csv",
+                    "fileName": "argentina-trabaja-total-titulares-2018-01-31.csv"
+                }
+            ],
+            "keyword": [
+                "argentina trabaja",
+                "inclusion laboral",
+                "inclusion social",
+                "prist"
+            ],
+            "superTheme": [
+                "EDUC",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Proyectos de integraci\u00f3n socio urbana",
+            "description": "Listado de proyectos de integraci\u00f3n socio urbana desarrollados en barrios populares.",
+            "modified": "2022-04-07T08:22:27.687908",
+            "identifier": "3767bc2b-1a9b-4270-83ad-0cddefbcbe0f",
+            "issued": "2021-12-13T08:35:14.232920",
+            "landingPage": "",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social, Secretar\u00eda de Integraci\u00f3n Socio Urbana"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "b87d7515-3f3e-4398-a566-bda4218a1ab1",
+                    "format": "CSV",
+                    "title": "Proyectos financiados por el Fondo para la Integraci\u00f3n Socio Urbana",
+                    "description": "Listado de proyectos financiados por el Fondo para la Integraci\u00f3n Socio Urbana",
+                    "type": "file.upload",
+                    "issued": "2021-12-13T08:35:45.862612",
+                    "modified": "2022-04-07T08:22:17.460264",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/b87d7515-3f3e-4398-a566-bda4218a1ab1",
+                    "field": [
+                        {
+                            "title": "ID RENABAP",
+                            "description": "C\u00f3digo de identificaci\u00f3n RENABAP",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Barrio",
+                            "description": "Nombre Barrio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Municipio",
+                            "description": "Nombre Municipio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Provincia",
+                            "description": "Nombre Provincia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de UE",
+                            "description": "Entidad que presenta el proyecto y es responsable de la administracion del mismo",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de Proyecto",
+                            "description": "L\u00ednea de acci\u00f3n en la que se enmarca el proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Nombre de Proyecto",
+                            "description": "Nombre que se le asigna al proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Financiamiento",
+                            "description": "Fuente de Financiamiento para el desarrollo del proyecto",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Estado",
+                            "description": "Detalle del momento del ciclo de proyectos en los que se encuentra el proyecto de referencia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Monto Total",
+                            "description": "Monto en pesos por los que se firm\u00f3 el convenio para la intervenci\u00f3n",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Acta de Inicio Real",
+                            "description": "Fecha en la que la UE present\u00f3 el acta de inicio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "% AFis",
+                            "description": "Porcentaje de avance f\u00edsico del proyecto",
+                            "type": "string"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/b87d7515-3f3e-4398-a566-bda4218a1ab1/download/proyectos_fisu-2022-04-07.csv",
+                    "fileName": "proyectos_fisu-2022-04-07.csv"
+                },
+                {
+                    "identifier": "39585875-3c2c-457a-b0d9-f7e3710bdf87",
+                    "format": "CSV",
+                    "title": "Proyectos Programa de Integraci\u00f3n Socio Urbana (PISU)",
+                    "description": "Listado de proyectos financiados en el marco del Programa de Integraci\u00f3n Socio Urbana (PISU), con financiamiento del BID 4804 OC/AR",
+                    "type": "file.upload",
+                    "issued": "2022-01-05T08:44:17.607812",
+                    "modified": "2022-04-07T08:22:27.666581",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/39585875-3c2c-457a-b0d9-f7e3710bdf87",
+                    "field": [
+                        {
+                            "title": "ID RENABAP",
+                            "description": "C\u00f3digo de identificaci\u00f3n RENABAP",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Barrio",
+                            "description": "Nombre Barrio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Municipio",
+                            "description": "Nombre Municipio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Provincia",
+                            "description": "Nombre Provincia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de UE",
+                            "description": "Entidad que presenta el proyecto y es responsable de la administracion del mismo",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de Proyecto",
+                            "description": "L\u00ednea de acci\u00f3n en la que se enmarca el proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Nombre de Proyecto",
+                            "description": "Nombre que se le asigna al proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Financiamiento",
+                            "description": "Fuente de Financiamiento para el desarrollo del proyecto",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Estado",
+                            "description": "Detalle del momento del ciclo de proyectos en los que se encuentra el proyecto de referencia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Monto Total",
+                            "description": "Monto en pesos por los que se firm\u00f3 el convenio para la intervenci\u00f3n",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Acta de Inicio Real",
+                            "description": "Fecha en la que la UE present\u00f3 el acta de inicio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "% AFis",
+                            "description": "Porcentaje de avance f\u00edsico del proyecto",
+                            "type": "string"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/39585875-3c2c-457a-b0d9-f7e3710bdf87/download/proyectos_bid-2022-04-07.csv",
+                    "fileName": "proyectos_bid-2022-04-07.csv"
+                },
+                {
+                    "identifier": "bde6a697-9a35-4146-9d2a-9eab42dfe196",
+                    "format": "CSV",
+                    "title": "Proyectos de Programa Argentina Unida por la Integraci\u00f3n de Barrios Populares",
+                    "description": "Listado de proyectos del Programa Argentina Unida por la Integraci\u00f3n de Barrios Populares.",
+                    "type": "file.upload",
+                    "issued": "2022-01-05T08:44:49.382571",
+                    "modified": "2022-04-07T08:22:09.563191",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/bde6a697-9a35-4146-9d2a-9eab42dfe196",
+                    "field": [
+                        {
+                            "title": "ID RENABAP",
+                            "description": "C\u00f3digo de identificaci\u00f3n RENABAP",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Barrio",
+                            "description": "Nombre Barrio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Municipio",
+                            "description": "Nombre Municipio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Provincia",
+                            "description": "Nombre Provincia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de UE",
+                            "description": "Entidad que presenta el proyecto y es responsable de la administracion del mismo",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Tipo de Proyecto",
+                            "description": "L\u00ednea de acci\u00f3n en la que se enmarca el proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Nombre de Proyecto",
+                            "description": "Nombre que se le asigna al proyecto a financiarse",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Financiamiento",
+                            "description": "Fuente de Financiamiento para el desarrollo del proyecto",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Estado",
+                            "description": "Detalle del momento del ciclo de proyectos en los que se encuentra el proyecto de referencia",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Monto Total",
+                            "description": "Monto en pesos por los que se firm\u00f3 el convenio para la intervenci\u00f3n",
+                            "type": "string"
+                        },
+                        {
+                            "title": "Acta de Inicio Real",
+                            "description": "Fecha en la que la UE present\u00f3 el acta de inicio",
+                            "type": "string"
+                        },
+                        {
+                            "title": "% AFis",
+                            "description": "Porcentaje de avance f\u00edsico del proyecto",
+                            "type": "string"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/3767bc2b-1a9b-4270-83ad-0cddefbcbe0f/resource/bde6a697-9a35-4146-9d2a-9eab42dfe196/download/proyectos_ff11-2022-04-07.csv",
+                    "fileName": "proyectos_ff11-2022-04-07.csv"
+                }
+            ],
+            "keyword": [
+                "integracion socio urbana",
+                "renabap",
+                "sisu"
+            ],
+            "superTheme": [
+                "GOVE"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Registro Nacional de Barrios Populares",
+            "description": "Mapa de los barrios populares de Argentina.",
+            "modified": "2022-02-09T13:43:06.833100",
+            "identifier": "0d022767-9390-486a-bff4-ba53b85d730e",
+            "issued": "2021-04-17T16:11:36.938004",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/renabap/mapa",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social, Secretar\u00eda de Integraci\u00f3n Socio Urbana"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "9a951270-60dd-4f21-aa19-4ef1205620bd",
+                    "format": "CSV",
+                    "title": "Barrios Populares de Argentina",
+                    "description": "Mapa de los barrios populares de Argentina registrados en el Registro Nacional de Barrios Populares",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T16:12:04.711001",
+                    "modified": "2022-02-09T13:42:49.872873",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/9a951270-60dd-4f21-aa19-4ef1205620bd",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Identificador \u00fanico del barrio en el Registro",
+                            "title": "id_renabap"
+                        },
+                        {
+                            "type": "",
+                            "description": "",
+                            "title": "nombre_barrio"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la localidad donde se encuentra el barrio de acuerdo al sentido identitario de los habitantes",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "",
+                            "description": "A\u00f1o aproximado de creaci\u00f3n del barrio",
+                            "title": "a\u00f1o_creacion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso a la energ\u00eda el\u00e9ctrica",
+                            "title": "acceso_electricidad"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de eliminaci\u00f3n de extretas",
+                            "title": "acceso_cloaca"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso al agua",
+                            "title": "acceso_agua"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de familias estimadas que habitan el barrio",
+                            "title": "cantidad_familias_estimado"
+                        },
+                        {
+                            "type": "array",
+                            "description": "Geometr\u00eda del pol\u00edgono",
+                            "title": "geometry"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/9a951270-60dd-4f21-aa19-4ef1205620bd/download/20220131_info_publica.csv",
+                    "fileName": "20220131_info_publica.csv"
+                },
+                {
+                    "identifier": "97cc7d10-ad4c-46cb-9ee4-becb402adf9f",
+                    "format": "GeoJSON",
+                    "title": "Barrios Populares de Argentina - GeoJSON",
+                    "description": "Mapa de los barrios populares de Argentina registrados en el Registro Nacional de Barrios Populares",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T16:12:26.723875",
+                    "modified": "2022-02-09T13:43:06.813562",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/97cc7d10-ad4c-46cb-9ee4-becb402adf9f",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Identificador \u00fanico del barrio en el Registro",
+                            "title": "id_renabap"
+                        },
+                        {
+                            "type": "",
+                            "description": "",
+                            "title": "nombre_barrio"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la localidad donde se encuentra el barrio de acuerdo al sentido identitario de los habitantes",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "",
+                            "description": "A\u00f1o aproximado de creaci\u00f3n del barrio",
+                            "title": "a\u00f1o_creacion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso a la energ\u00eda el\u00e9ctrica",
+                            "title": "acceso_electricidad"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de eliminaci\u00f3n de extretas",
+                            "title": "acceso_cloaca"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso al agua",
+                            "title": "acceso_agua"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de familias estimadas que habitan el barrio",
+                            "title": "cantidad_familias_estimado"
+                        },
+                        {
+                            "type": "array",
+                            "description": "Geometr\u00eda del pol\u00edgono",
+                            "title": "geometry"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/97cc7d10-ad4c-46cb-9ee4-becb402adf9f/download/20220131_info_publica.geojson",
+                    "fileName": "20220131_info_publica.geojson"
+                },
+                {
+                    "identifier": "0396a8a3-8998-4fc1-8503-e6706667b5fa",
+                    "format": "gpkg",
+                    "title": "Barrios Populares de Argentina - GPKG",
+                    "description": "Mapa de los barrios populares de Argentina registrados en el Registro Nacional de Barrios Populares",
+                    "type": "file.upload",
+                    "issued": "2021-04-17T16:12:57.470138",
+                    "modified": "2022-02-09T13:42:38.154910",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/0396a8a3-8998-4fc1-8503-e6706667b5fa",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Identificador \u00fanico del barrio en el Registro",
+                            "title": "id_renabap"
+                        },
+                        {
+                            "type": "",
+                            "description": "",
+                            "title": "nombre_barrio"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "cod_depto"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre del departamento  ",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "",
+                            "description": "Nombre de la localidad donde se encuentra el barrio de acuerdo al sentido identitario de los habitantes",
+                            "title": "localidad"
+                        },
+                        {
+                            "type": "",
+                            "description": "A\u00f1o aproximado de creaci\u00f3n del barrio",
+                            "title": "a\u00f1o_creacion"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso a la energ\u00eda el\u00e9ctrica",
+                            "title": "acceso_electricidad"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de eliminaci\u00f3n de extretas",
+                            "title": "acceso_cloaca"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Modo de acceso al agua",
+                            "title": "acceso_agua"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de familias estimadas que habitan el barrio",
+                            "title": "cantidad_familias_estimado"
+                        },
+                        {
+                            "type": "array",
+                            "description": "Geometr\u00eda del pol\u00edgono",
+                            "title": "geometry"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/0d022767-9390-486a-bff4-ba53b85d730e/resource/0396a8a3-8998-4fc1-8503-e6706667b5fa/download/20210131_info_publica.gpkg",
+                    "fileName": "20210131_info_publica.gpkg"
+                }
+            ],
+            "keyword": [
+                "barrios populares",
+                "integracion socio urbana",
+                "renabap"
+            ],
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "eventual",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Reparaci\u00f3n econ\u00f3mica para hijos e hijas de v\u00edctimas de violencia de g\u00e9nero",
+            "description": "Datos correspondientes a los destinatarios del r\u00e9gimen de Reparaci\u00f3n econ\u00f3mica para hijos e hijas de v\u00edctimas de violencia de g\u00e9nero - LEY 27.452* (RENNyA)",
+            "modified": "2022-02-23T08:01:33.922548",
+            "identifier": "974f504d-1fdf-4883-bd2f-e08b31cdffa3",
+            "issued": "2021-04-17T16:15:57.131830",
+            "landingPage": "https://www.argentina.gob.ar/rennya",
             "license": "Creative Commons Attribution",
             "spatial": [
                 "ARG"
@@ -118,41 +1990,169 @@
             },
             "distribution": [
                 {
-                    "identifier": "05482f0d-8368-44c6-a06d-18c4312d0141",
+                    "identifier": "e70c1a75-60d7-4f32-afe4-5c7823da9158",
                     "format": "CSV",
-                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales",
-                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa uno.",
+                    "title": "Destinatarios vigentes RENNyA",
+                    "description": "Cantidad de destinatarios y monto correspondientes al r\u00e9gimen de Reparaci\u00f3n econ\u00f3mica para hijos e hijas de v\u00edctimas de violencia de g\u00e9nero - LEY 27.452 (RENNyA) al 2021-06-30",
                     "type": "file.upload",
-                    "issued": "2021-06-11T16:10:08.908317",
-                    "modified": "2021-06-11T16:10:08.879956",
+                    "issued": "2021-04-17T16:16:32.330412",
+                    "modified": "2022-02-23T08:01:33.895241",
                     "license": "cc-by",
-                    "accessURL": "http://localhost:5000//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141",
-                    "field": [],
-                    "downloadURL": "http://localhost:5000/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/05482f0d-8368-44c6-a06d-18c4312d0141/download/pae_etapa_1_2021-03-31.csv",
-                    "fileName": "pae_etapa_1_2021-03-31.csv"
-                },
-                {
-                    "identifier": "ba9ecf55-8760-42d5-9c85-b0e070871980",
-                    "format": "CSV",
-                    "title": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales - Etapa 2",
-                    "description": "Programa de acompa\u00f1amiento para el egreso de j\u00f3venes sin cuidados parentales (PAE) etapa dos.",
-                    "type": "file.upload",
-                    "issued": "2021-06-11T16:10:31.548647",
-                    "modified": "2021-06-11T16:10:31.493121",
-                    "license": "cc-by",
-                    "accessURL": "http://localhost:5000//dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980",
-                    "field": [],
-                    "downloadURL": "http://localhost:5000/dataset/d1e40846-b06c-4c0b-a8af-3ccc78ea1b7c/resource/ba9ecf55-8760-42d5-9c85-b0e070871980/download/pae_etapa_2_2021-03-31.csv",
-                    "fileName": "pae_etapa_2_2021-03-31.csv"
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/974f504d-1fdf-4883-bd2f-e08b31cdffa3/resource/e70c1a75-60d7-4f32-afe4-5c7823da9158",
+                    "field": [
+                        {
+                            "type": "date",
+                            "description": "Periodo de tiempo analizado",
+                            "title": "periodo"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00f1blica Argentina  ",
+                            "title": "provincia_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia  ",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de destinatarios vigentes que fueron incluidos en la n\u00f3mina de pago en el mes de referencia, que efectivamente recibieron o recibir\u00e1n pago por la prestaci\u00f3n correspondiente a ese mes.",
+                            "title": "destinatarios"
+                        },
+                        {
+                            "type": "float",
+                            "description": "Monto transferido",
+                            "title": "monto"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Cantidad de destinatarios vigentes que fueron incluidos en la n\u00f3mina de pago en el mes de referencia, que efectivamente recibieron o recibir\u00e1n pago por la prestaci\u00f3n correspondiente a ese mes retroactivamente.",
+                            "title": "destinatarios_retroactivo"
+                        },
+                        {
+                            "type": "float",
+                            "description": "Monto transferido retroactivamente.",
+                            "title": "monto_retroactivo"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/974f504d-1fdf-4883-bd2f-e08b31cdffa3/resource/e70c1a75-60d7-4f32-afe4-5c7823da9158/download/rennya_2021-12-31.csv",
+                    "fileName": "rennya_2021-12-31.csv"
                 }
             ],
-            "keyword": [],
-            "superTheme": [
-                "ECON",
-                "ENVI",
-                "INTR"
+            "keyword": [
+                "adolescencia",
+                "adultos mayores",
+                "familia",
+                "ni\u00f1ez",
+                "politicas de cuidado",
+                "rennya",
+                "sennaf"
             ],
-            "accrualPeriodicity": "R/P10Y",
+            "superTheme": [
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "language": [
+                "spa"
+            ]
+        },
+        {
+            "title": "Titulares de la Prestaci\u00f3n Alimentar",
+            "description": "Datos correspondientes a los titulares de la Prestaci\u00f3n Alimentar en el marco del Plan Argentina Contra el Hambre",
+            "modified": "2022-03-25T08:21:39.196166",
+            "identifier": "8673fde8-70eb-4f25-8761-f8ae90ba21cd",
+            "issued": "2021-04-16T16:36:24.779197",
+            "landingPage": "https://www.argentina.gob.ar/desarrollosocial/prestacion-alimentar",
+            "license": "Creative Commons Attribution",
+            "spatial": [
+                "ARG"
+            ],
+            "publisher": {
+                "mbox": "datosabiertos@desarrollosocial.gob.ar",
+                "name": "Ministerio de Desarrollo Social de la Naci\u00f3n. Secretar\u00eda de Inclusi\u00f3n Social"
+            },
+            "contactPoint": {
+                "fn": "Ministerio de Desarrollo Social de la Naci\u00f3n. Unidad de Gabinete de Asesores. Direcci\u00f3n General de Informaci\u00f3n Social Estrat\u00e9gica",
+                "hasEmail": "datosabiertos@desarrollosocial.gob.ar"
+            },
+            "distribution": [
+                {
+                    "identifier": "7d8b67b8-5f75-41ca-b6fb-83afbfdc46a1",
+                    "format": "ZIP",
+                    "title": "Titulares de la Prestaci\u00f3n Alimentar",
+                    "description": "Listado de titulares por provincia y departamento con \u00faltimo monto y periodo desde/hasta que cobraron la prestaci\u00f3n.",
+                    "type": "file.upload",
+                    "issued": "2021-04-16T16:42:36.013803",
+                    "modified": "2022-03-25T08:21:39.122520",
+                    "license": "cc-by",
+                    "accessURL": "https://datosabiertos.desarrollosocial.gob.ar//dataset/8673fde8-70eb-4f25-8761-f8ae90ba21cd/resource/7d8b67b8-5f75-41ca-b6fb-83afbfdc46a1",
+                    "field": [
+                        {
+                            "type": "string",
+                            "description": "Identificaci\u00f3n \u00fanica de la persona",
+                            "title": "persona_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Sexo seg\u00fan DNI",
+                            "title": "sexo"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Edad del titular de la tarjeta",
+                            "title": "edad"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de provincia codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina ",
+                            "title": "provincia_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre de la provincia",
+                            "title": "provincia"
+                        },
+                        {
+                            "type": "string",
+                            "description": "C\u00f3digo de departamento codificado seg\u00fan la Base de Asentamientos Humanos de la Rep\u00fablica Argentina ",
+                            "title": "departamento_id"
+                        },
+                        {
+                            "type": "string",
+                            "description": "Nombre del departamento",
+                            "title": "departamento"
+                        },
+                        {
+                            "type": "integer",
+                            "description": "Monto de la \u00faltima liquidaci\u00f3n",
+                            "title": "monto_ultima_liquidacion"
+                        },
+                        {
+                            "type": "date",
+                            "description": "Periodo de la primera liquidaci\u00f3n",
+                            "title": "periodo_desde"
+                        },
+                        {
+                            "type": "date",
+                            "description": "Periodo de la \u00faltima liquidaci\u00f3n",
+                            "title": "periodo_hasta"
+                        }
+                    ],
+                    "downloadURL": "https://datosabiertos.desarrollosocial.gob.ar/dataset/8673fde8-70eb-4f25-8761-f8ae90ba21cd/resource/7d8b67b8-5f75-41ca-b6fb-83afbfdc46a1/download/titulares_prestacion_alimentar-2022-02-01.zip",
+                    "fileName": "titulares_prestacion_alimentar-2022-02-01.zip"
+                }
+            ],
+            "keyword": [
+                "argentina contra el hambre",
+                "prestacion alimentar",
+                "tarjeta alimentar"
+            ],
+            "superTheme": [
+                "HEAL",
+                "SOCI"
+            ],
+            "accrualPeriodicity": "R/P3M",
             "language": [
                 "spa"
             ]
