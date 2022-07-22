@@ -23,13 +23,12 @@ Example:
         {% endblock %}
       </ul>
     {% else %}
-      {% if h.check_access('resource_create', {'package_id': pkg['id']}) and not is_activity_archive %}
-          {% trans url=h.url_for(pkg.type ~ '_resource.new', id=pkg.name) %}
-            <p class="empty">This dataset has no data, <a href="{{ url }}">why not add some?</a></p>
-          {% endtrans %}
-      {% else %}
-          <p class="empty">{{ _('This dataset has no data') }}</p>
-      {% endif %}
+      <p class="empty">{{ _('This dataset has no data') }}</p>
     {% endif %}
+      {% if h.check_access('resource_create', {'package_id': pkg['id']}) %}
+      {% trans url=h.url_for(pkg.type ~ '_resource.new', id=pkg.name) %}
+      <a class="btn btn-link" href="{{ url }}">Agregar recurso</a>
+      {% endtrans %}
+      {% endif %}
     {% endblock %}
 </section>
