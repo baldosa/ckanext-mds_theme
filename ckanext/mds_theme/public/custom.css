@@ -1,4 +1,8 @@
 /* andino */
+#header {
+  -webkit-box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+}
 
 .logo-ministerio {
   height: 50px;
