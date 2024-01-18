@@ -10,8 +10,8 @@ from urllib.parse import urlparse
 # from pydatajson import DataJson
 # from pydatajson.writers import write_xlsx_catalog
 
-SITE_URL = "https://datosabiertos.desarrollosocial.gob.ar/"
-# SITE_URL = 'http://localhost:5000/'
+SITE_URL = "https://datosabiertos.desarrollosocial.gob.ar"
+QUERY_URL = 'http://10.80.5.13:5000/'
 
 BASE_DICT = {
     "version": "1.1",
@@ -35,7 +35,7 @@ BASE_DICT = {
 
 
 def gen_datasetinfo(dataset_id):
-    dataset_url = f"{SITE_URL}/api/3/action/package_show?id={dataset_id}"
+    dataset_url = f"{QUERY_URL}/api/3/action/package_show?id={dataset_id}"
     r = requests.get(dataset_url)
     dataset_info = r.json()["result"]
     dataset = {
@@ -97,27 +97,23 @@ def gen_resources(dataset_info):
 
 
 def latest_update():
-    response = requests.get(f"{SITE_URL}/data.json")
+    response = requests.get(f"{QUERY_URL}/data.json")
     data = response.json()
     return max([x["modified"] for x in data["dataset"]])
 
-
-# %%
 if __name__ == "__main__":
-    datasets_url = f"{SITE_URL}/api/3/action/package_list"
+    datasets_url = f"{QUERY_URL}/api/3/action/package_list"
     r = requests.get(datasets_url)
     datasets_id = r.json()["result"]
-
+    
     datasets = []
     for d in datasets_id:
         datasets.append(gen_datasetinfo(d))
-
+    
     BASE_DICT["dataset"] = datasets
-
+    
     if max([x["modified"] for x in BASE_DICT["dataset"]]) > latest_update():
         with open(
             f"{os.path.abspath(os.path.dirname(__file__))}/public/data.json", "w"
         ) as outfile:
             json.dump(BASE_DICT, outfile, indent=4)
-
-    # write_xlsx_catalog(BASE_DICT, f'{os.path.abspath(os.path.dirname(__file__))}/public/data.json')
